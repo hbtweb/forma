@@ -1,0 +1,9 @@
+{:collapsible
+ {:slots [:trigger :content]
+  :props [:open :on-open-change :disabled]
+  :a11y {:role "region"}
+  :default-props {:open false :disabled false}
+  :schema-hints {}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Simple collapse/expand container"}}
+

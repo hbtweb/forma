@@ -1,0 +1,6 @@
+{:pagination
+ {:slots []
+  :props [:page :per-page :total :on-page-change]
+  :a11y {:role "navigation" :aria-label "pagination"}
+  :default-props {:page 1 :per-page 25}
+  :schema-hints {}}}

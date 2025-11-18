@@ -1,0 +1,52 @@
+{:policy :default
+ :description "Default policy configuration for Forma projects"
+ :version "5.6.0"
+
+ ;; Global policy settings
+ :enabled true
+ :on-violation :warn  ; :error (fail build), :warn (continue with warnings), :ignore
+
+ ;; Which policy configs to load
+ :configs [:design-system :accessibility :performance]
+
+ ;; Policy-specific global settings (can be overridden per-policy)
+ :severity-defaults {
+   :token-enforcement :error
+   :color-palette :warning
+   :spacing-scale :warning
+   :typography-scale :warning
+   :aria-required :error
+   :semantic-html :warning
+   :color-contrast :warning
+   :bundle-size :error
+   :unused-code :warning
+ }
+
+ ;; Environment-specific settings
+ :enforce-in-dev false     ; Only warn in development
+ :enforce-in-prod true     ; Enforce in production
+
+ ;; Reporting settings
+ :reporting {
+   :colorize true
+   :show-location true
+   :show-fix-suggestions true
+   :group-by :severity  ; :severity or :type
+   :verbose false
+ }
+
+ ;; Cache settings
+ :cache {
+   :enabled true
+   :ttl-ms 3600000  ; 1 hour
+ }
+
+ ;; Custom policy function namespace (optional)
+ :custom-policy-ns nil
+
+ ;; Metadata
+ :metadata {
+   :author "Forma Team"
+   :created "2025-01-13"
+   :phase "5.6"
+ }}

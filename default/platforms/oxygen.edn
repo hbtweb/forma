@@ -1,0 +1,55 @@
+{:platform :oxygen
+ :description "Oxygen builder JSON compilation rules"
+ :compiler {
+   :extractors {
+     :property-mappings {
+       :type :property-mapper
+       :mappings {:design.background :background
+                  :design.typography.color :color
+                  :design.spacing.padding :padding
+                  :design.spacing.margin :margin
+                  :design.size.width :width
+                  :design.size.height :height
+                  :design.typography.fontSize :font-size
+                  :design.typography.fontWeight :font-weight
+                  :design.typography.lineHeight :line-height
+                  :design.border.radius :border-radius
+                  :design.border.color :border-color}
+       :target-extractor :styles  ; Maps to CSS styles extractor
+     }
+   }
+ }
+ :elements
+ {:button {:element "ct_button" :class-key :ct-classes :content-key :ct-content :prop-map {:url :link :on-click :onclick}}
+  :badge {:element "ct_div_block" :class-key :ct-classes :content-key :ct-content}
+  :input {:element "ct_text_field" :class-key :ct-classes}
+  :select {:element "ct_select" :class-key :ct-classes}
+  :textarea {:element "ct_textarea" :class-key :ct-classes}
+  :checkbox {:element "ct_checkbox" :class-key :ct-classes}
+  :radio {:element "ct_radio_button" :class-key :ct-classes}
+  :card {:element "ct_div_block" :class-key :ct-classes}
+  :modal {:element "ct_modal" :class-key :ct-classes}
+  :tabs {:element "ct_tabs" :class-key :ct-classes}
+  :accordion {:element "ct_accordion" :class-key :ct-classes}
+  :alert {:element "ct_div_block" :class-key :ct-classes}
+  :tooltip {:element "ct_div_block" :class-key :ct-classes}
+  :progress {:element "ct_progress_bar" :class-key :ct-classes}
+  :dropdown {:element "ct_dropdown" :class-key :ct-classes}
+  :container {:element "ct_section" :class-key :ct-classes}
+  :heading {:element "ct_headline" :class-key :ct-classes :content-key :ct-content :prop-map {:level :tag}}
+  :div {:element "ct_div_block" :class-key :ct-classes}
+  :data-table {:element "ct_div_block" :class-key :ct-classes}
+  :pagination {:element "ct_div_block" :class-key :ct-classes}
+  :button-group {:element "ct_div_block" :class-key :ct-classes}
+  :search-input {:element "ct_text_field" :class-key :ct-classes :prop-map {:placeholder :placeholder :value :value}}
+  :kanban-board {:element "ct_div_block" :class-key :ct-classes}
+  :calendar {:element "ct_div_block" :class-key :ct-classes}
+  :timeline {:element "ct_div_block" :class-key :ct-classes}
+  :stat-card {:element "ct_div_block" :class-key :ct-classes}
+  :filter-panel {:element "ct_div_block" :class-key :ct-classes}
+  :autocomplete {:element "ct_text_field" :class-key :ct-classes}
+  :file-upload {:element "ct_div_block" :class-key :ct-classes}
+  :rich-text-editor {:element "ct_code_block" :class-key :ct-classes}
+  :inline-editor {:element "ct_text_field" :class-key :ct-classes}
+  :wizard {:element "ct_div_block" :class-key :ct-classes}
+  :quick-actions {:element "ct_div_block" :class-key :ct-classes}}}

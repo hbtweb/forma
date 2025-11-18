@@ -1,0 +1,8 @@
+{:quick-actions
+ {:slots [:actions]
+  :props [:position :trigger]
+  :a11y {:role "menu"}
+  :default-props {:position :bottom-right :trigger :click}
+  :schema-hints {:position [:top-left :top-right :bottom-left :bottom-right]
+                 :trigger [:click :hover]}}}
+

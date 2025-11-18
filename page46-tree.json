@@ -1,0 +1,55 @@
+{
+  "_nextNodeId" : 200,
+  "status" : "exported",
+  "root" : {
+    "id" : 1,
+    "data" : {
+      "type" : "root",
+      "properties" : [ ]
+    },
+    "children" : [ {
+      "id" : 100,
+      "data" : {
+        "type" : "EssentialElements\\Section",
+        "properties" : {
+          "design" : {
+            "background" : "#1a202c",
+            "padding" : "80px 20px",
+            "layout_v2" : {
+              "layout" : "vertical"
+            }
+          }
+        }
+      },
+      "children" : [ {
+        "id" : 101,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "Hello from Forma!",
+                "tags" : "h1"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 102,
+        "data" : {
+          "type" : "EssentialElements\\Text",
+          "properties" : {
+            "content" : {
+              "text" : "This page was deployed programmatically with CORRECT structure!"
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      } ],
+      "_parentId" : 1
+    } ]
+  }
+}

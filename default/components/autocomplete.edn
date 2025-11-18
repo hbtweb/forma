@@ -1,0 +1,7 @@
+{:autocomplete
+ {:slots []
+  :props [:entity :value :on-select :on-search :placeholder :multiple :create-option]
+  :a11y {:role "combobox" :aria-autocomplete "list"}
+  :default-props {:multiple false :create-option false}
+  :schema-hints {}}}
+

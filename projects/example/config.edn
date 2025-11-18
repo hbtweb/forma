@@ -1,0 +1,25 @@
+{:project-name "example"
+ :description "Example project configuration"
+ 
+ ;; Project-specific defaults (override base config)
+ :defaults {
+   :platform-stack [:html :css :htmx]
+   :styling-system :shadcn-ui
+ }
+ 
+ ;; Project-specific resolution order (optional)
+ ;; :resolution-order [:project :library :default]
+ 
+ ;; Project-specific feature flags (optional)
+ ;; :features {
+ ;;   :pre-resolution true
+ ;;   :platform-discovery true
+ ;; }
+ 
+ ;; Project-specific paths (optional)
+ ;; :paths {
+ ;;   :components "custom-components/"
+ ;;   :styles "custom-styles/"
+ ;; }
+}
+

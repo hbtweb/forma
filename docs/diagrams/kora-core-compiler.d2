@@ -1,0 +1,170 @@
+title: "Kora Core Compiler Architecture" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Universal Compiler Pipeline
+
+CompilerPipeline: {
+  shape: class
+  label: "CompilerPipeline Protocol"
+  
+  parse-element: "parse-element[element] → {:type :props :children}"
+  expand-properties: "expand-properties[props] → expanded-props"
+  apply-styling: "apply-styling[element props context] → styled-props"
+  compile-element: "compile-element[element context] → platform-output"
+}
+
+# Pipeline Steps
+Step1-Translate: {
+  shape: class
+  label: "1. Translate\nvocabulary → universal primitives"
+  style.fill: "#e8f5e9"
+}
+
+Step2-Parse: {
+  shape: class
+  label: "2. Parse\nEDN → unified format"
+  style.fill: "#e8f5e9"
+}
+
+Step3-Expand: {
+  shape: class
+  label: "3. Expand\nshortcuts → full properties"
+  style.fill: "#e8f5e9"
+}
+
+Step4-Resolve: {
+  shape: class
+  label: "4. Resolve\ninheritance + tokens"
+  style.fill: "#e8f5e9"
+}
+
+Step5-Transform: {
+  shape: class
+  label: "5. Transform\napply styling"
+  style.fill: "#e8f5e9"
+}
+
+Step6-Output: {
+  shape: class
+  label: "6. Output\ncompile to platform"
+  style.fill: "#e8f5e9"
+}
+
+compile-with-pipeline: {
+  shape: class
+  label: "compile-with-pipeline\nUniversal Compiler Pipeline"
+  style.fill: "#e3f2fd"
+}
+
+resolve-context: {
+  shape: class
+  label: "resolve-context (Universal)"
+  
+  inheritance: "inheritance/resolve-inheritance"
+  tokens: "tokens/resolve-tokens"
+  
+  inheritance -> tokens
+}
+
+compile-collection: {
+  shape: class
+  label: "compile-collection"
+  description: "Maps compile-with-pipeline over elements"
+}
+
+# Flow
+EDN-Element: {
+  shape: cylinder
+  label: "EDN Element\n[:div {:bg \"red\"}]"
+}
+
+Translated: {
+  shape: cylinder
+  label: "Translated\n(vocabulary applied)"
+}
+
+Parsed: {
+  shape: cylinder
+  label: "Parsed\n{:type :div :props {...}}"
+}
+
+Expanded: {
+  shape: cylinder
+  label: "Expanded\n{:background \"red\"}"
+}
+
+Resolved: {
+  shape: cylinder
+  label: "Resolved\n(inheritance + tokens)"
+}
+
+Styled: {
+  shape: cylinder
+  label: "Styled\n(styles applied)"
+}
+
+Output: {
+  shape: cylinder
+  label: "Platform Output\n[:div {:style \"...\"}]"
+}
+
+# Application Implementations
+FormaCompiler: {
+  shape: class
+  label: "FormaCompiler\n(implements CompilerPipeline)"
+  style.fill: "#e3f2fd"
+}
+
+InterludeCompiler: {
+  shape: class
+  label: "InterludeCompiler\n(implements CompilerPipeline)"
+  style.fill: "#f3e5f5"
+}
+
+# Dependencies
+kora.core.inheritance: {
+  shape: package
+  label: "kora.core.inheritance"
+  style.fill: "#fff3e0"
+}
+
+kora.core.tokens: {
+  shape: package
+  label: "kora.core.tokens"
+  style.fill: "#fff3e0"
+}
+
+kora.core.translation: {
+  shape: package
+  label: "kora.core.translation"
+  style.fill: "#fff3e0"
+}
+
+# Connections
+EDN-Element -> compile-with-pipeline
+compile-with-pipeline -> Step1-Translate
+Step1-Translate -> Translated
+Translated -> Step2-Parse
+Step2-Parse -> Parsed
+Parsed -> Step3-Expand
+Step3-Expand -> Expanded
+Expanded -> Step4-Resolve
+Step4-Resolve -> Resolved
+Resolved -> Step5-Transform
+Step5-Transform -> Styled
+Styled -> Step6-Output
+Step6-Output -> Output
+
+CompilerPipeline -> compile-with-pipeline
+resolve-context -> kora.core.inheritance
+resolve-context -> kora.core.tokens
+Step1-Translate -> kora.core.translation
+Step4-Resolve -> resolve-context
+
+FormaCompiler -> CompilerPipeline
+InterludeCompiler -> CompilerPipeline
+
+compile-collection -> compile-with-pipeline
+

@@ -1,0 +1,7 @@
+{:button
+ {:slots [:children]
+  :props [:variant :size :disabled :type :on-click]
+  :a11y {:role "button"}
+  :default-props {:type "button" :disabled false}
+  :schema-hints {:variant [:primary :secondary :destructive :outline :ghost :link]
+                 :size [:sm :md :lg :icon]}}}

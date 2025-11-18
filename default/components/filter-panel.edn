@@ -1,0 +1,7 @@
+{:filter-panel
+ {:slots [:filters]
+  :props [:active-filters :on-filter-change :on-clear :collapsible]
+  :a11y {:role "region" :aria-label "filters"}
+  :default-props {:active-filters {} :collapsible true}
+  :schema-hints {}}}
+

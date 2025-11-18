@@ -1,0 +1,173 @@
+title: "Kora Core Inheritance System" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Main Resolution Function
+
+resolve-inheritance: {
+  shape: class
+  label: "resolve-inheritance"
+  description: "Universal inheritance resolution"
+  style.fill: "#e3f2fd"
+}
+
+# Core Functions
+
+resolve-hierarchy-levels: {
+  shape: class
+  label: "resolve-hierarchy-levels\nGet properties from each level"
+  style.fill: "#e3f2fd"
+}
+
+hierarchy-levels-note: {
+  shape: class
+  label: "Levels:\nGlobal: components definitions\nComponents: variants\nSections: section-specific overrides\nTemplates: template-specific\nPages: page-specific"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+merge-hierarchy-properties: {
+  shape: class
+  label: "merge-hierarchy-properties"
+  description: "Merge in priority order"
+  style.fill: "#fff3e0"
+}
+
+deep-merge: {
+  shape: class
+  label: "deep-merge"
+  description: "Recursive map merging"
+  style.fill: "#f3e5f5"
+}
+
+# Hierarchy Levels (Forma Example)
+
+Global: {
+  shape: cylinder
+  label: "Global Level\n(lowest priority)"
+  description: "Tokens, base defaults"
+  style.fill: "#e8f5e9"
+}
+
+Components: {
+  shape: cylinder
+  label: "Components Level"
+  description: "Component variants"
+  style.fill: "#e8f5e9"
+}
+
+Sections: {
+  shape: cylinder
+  label: "Sections Level"
+  description: "Section-specific overrides"
+  style.fill: "#e8f5e9"
+}
+
+Templates: {
+  shape: cylinder
+  label: "Templates Level"
+  description: "Template-specific"
+  style.fill: "#e8f5e9"
+}
+
+Pages: {
+  shape: cylinder
+  label: "Pages Level\n(highest priority)"
+  description: "Page-specific overrides"
+  style.fill: "#e8f5e9"
+}
+
+Instance: {
+  shape: cylinder
+  label: "Instance Props\n(overrides all)"
+  description: "Element-specific props"
+  style.fill: "#ffebee"
+}
+
+# Flow
+
+Element: {
+  shape: cylinder
+  label: "Element\n{:type :button :props {...}}"
+}
+
+Level-Props: {
+  shape: cylinder
+  label: "Level Properties\n{:global {...} :components {...}}"
+}
+
+Merged-Hierarchy: {
+  shape: cylinder
+  label: "Merged from Hierarchy"
+}
+
+Final-Props: {
+  shape: cylinder
+  label: "Final Properties\n(all inheritance applied)"
+}
+
+# Resolution Process
+
+Step1: {
+  shape: class
+  label: "Step 1: Get properties\nfrom each level"
+  style.fill: "#fff9c4"
+}
+
+Step2: {
+  shape: class
+  label: "Step 2: Merge hierarchy\n(lowest → highest)"
+  style.fill: "#fff9c4"
+}
+
+Step3: {
+  shape: class
+  label: "Step 3: Merge instance\n(highest priority)"
+  style.fill: "#fff9c4"
+}
+
+Step4: {
+  shape: class
+  label: "Step 4: Final result"
+  style.fill: "#fff9c4"
+}
+
+# Connections
+Element -> resolve-inheritance
+resolve-inheritance -> Step1
+Step1 -> resolve-hierarchy-levels
+resolve-hierarchy-levels -> hierarchy-levels-note
+resolve-hierarchy-levels -> Global
+resolve-hierarchy-levels -> Components
+resolve-hierarchy-levels -> Sections
+resolve-hierarchy-levels -> Templates
+resolve-hierarchy-levels -> Pages
+Global -> Level-Props
+Components -> Level-Props
+Sections -> Level-Props
+Templates -> Level-Props
+Pages -> Level-Props
+Level-Props -> Step2
+Step2 -> merge-hierarchy-properties
+merge-hierarchy-properties -> deep-merge
+deep-merge -> Merged-Hierarchy
+Merged-Hierarchy -> Step3
+Step3 -> Instance
+Instance -> Step4
+Step4 -> Final-Props
+
+# Hierarchy Priority Flow
+Global -> Components -> Sections -> Templates -> Pages -> Instance {
+  style.stroke-dash: 3
+  style.stroke: "#666"
+}
+
+# Example: Interlude Hierarchy
+Interlude-Hierarchy: {
+  shape: class
+  label: "Interlude Example:\n[:project :track :note]"
+  style.fill: "#f3e5f5"
+  style.stroke-dash: 2
+}
+

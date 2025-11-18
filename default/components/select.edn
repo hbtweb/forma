@@ -1,0 +1,7 @@
+{:select
+ {:slots [:options]
+  :props [:name :value :multiple :required :disabled :on-change]
+  :a11y {:role nil}
+  :default-props {:multiple false :required false :disabled false}
+  :schema-hints {}}}
+

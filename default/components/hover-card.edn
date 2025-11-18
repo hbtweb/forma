@@ -1,0 +1,9 @@
+{:hover-card
+ {:slots [:trigger :content]
+  :props [:open :on-open-change :open-delay :close-delay]
+  :a11y {:role "dialog"}
+  :default-props {:open false :open-delay 700 :close-delay 300}
+  :schema-hints {}
+  :platform-support [:web :desktop]
+  :platform-notes "Card that appears on hover"}}
+

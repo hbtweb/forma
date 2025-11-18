@@ -1,0 +1,289 @@
+title: "Forma-Kora Integration Architecture" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Kora Core Foundation
+
+kora-core: {
+  shape: package
+  label: "Kora Core\nUniversal Foundation"
+  style.fill: "#e3f2fd"
+  
+  compiler: {
+    shape: class
+    label: "kora.core.compiler\nUniversal Compiler Pipeline"
+    style.fill: "#fff3e0"
+  }
+  
+  inheritance: {
+    shape: class
+    label: "kora.core.inheritance\nUniversal Inheritance System"
+    style.fill: "#fff3e0"
+  }
+  
+  tokens: {
+    shape: class
+    label: "kora.core.tokens\nToken Resolution System"
+    style.fill: "#fff3e0"
+  }
+  
+  compiler -> inheritance
+  compiler -> tokens
+}
+
+# Forma Application
+
+forma: {
+  shape: package
+  label: "Forma\nUI + Geometry Application"
+  style.fill: "#f3e5f5"
+  
+  forma-compiler: {
+    shape: class
+    label: "FormaCompiler\n(implements CompilerPipeline)"
+    style.fill: "#e1bee7"
+  }
+  
+  forma-specific: {
+    shape: class
+    label: "Forma-Specific Features"
+    style.fill: "#e1bee7"
+  }
+  
+  platform-configs: {
+    shape: class
+    label: "Platform Configurations\nHTML, Oxygen Builder"
+    style.fill: "#e1bee7"
+  }
+  
+  forma-compiler -> forma-specific
+  forma-compiler -> platform-configs
+}
+
+# Dependency Relationship
+
+kora-core -> forma {
+  label: "requires"
+  style.stroke: "#1976d2"
+  style.stroke-width: 3
+}
+
+# Protocol Implementation
+
+CompilerPipeline: {
+  shape: class
+  label: "CompilerPipeline Protocol\n(defined in kora.core.compiler)"
+  style.fill: "#fff9c4"
+  style.stroke-dash: 2
+}
+
+forma-compiler -> CompilerPipeline {
+  label: "implements"
+  style.stroke: "#388e3c"
+  style.stroke-width: 2
+}
+
+CompilerPipeline -> kora-core.compiler
+
+# Forma Protocol Methods
+
+parse-element: {
+  shape: class
+  label: "parse-element\nForma-specific parsing"
+  description: "Handles vector/map syntax\n[:div {:class \"card\"} children]"
+  style.fill: "#e8f5e9"
+}
+
+expand-properties: {
+  shape: class
+  label: "expand-properties\nForma shortcuts"
+  description: ":bg → :background\n:pd → :padding"
+  style.fill: "#e8f5e9"
+}
+
+apply-styling: {
+  shape: class
+  label: "apply-styling\nForma styling + HTMX"
+  description: "CSS + HTMX attributes"
+  style.fill: "#e8f5e9"
+}
+
+compile-element: {
+  shape: class
+  label: "compile-element\nForma compilation"
+  description: "HTML/HTMX output\nPlatform-specific mapping"
+  style.fill: "#e8f5e9"
+}
+
+forma-compiler -> parse-element
+forma-compiler -> expand-properties
+forma-compiler -> apply-styling
+forma-compiler -> compile-element
+
+# Kora Core Functions Used by Forma
+
+compile-with-pipeline: {
+  shape: class
+  label: "compile-with-pipeline\nUniversal pipeline orchestrator"
+  style.fill: "#fff3e0"
+}
+
+compile-collection: {
+  shape: class
+  label: "compile-collection\nCompile multiple elements"
+  style.fill: "#fff3e0"
+}
+
+resolve-inheritance: {
+  shape: class
+  label: "resolve-inheritance\nMulti-level property resolution"
+  style.fill: "#fff3e0"
+}
+
+resolve-tokens: {
+  shape: class
+  label: "resolve-tokens\ntoken.path → value"
+  style.fill: "#fff3e0"
+}
+
+kora-core.compiler -> compile-with-pipeline
+kora-core.compiler -> compile-collection
+kora-core.inheritance -> resolve-inheritance
+kora-core.tokens -> resolve-tokens
+
+# Forma Uses Kora Functions
+
+forma-compiler -> compile-with-pipeline {
+  label: "uses"
+  style.stroke: "#f57c00"
+  style.stroke-width: 2
+}
+
+forma-compiler -> compile-collection {
+  label: "uses"
+  style.stroke: "#f57c00"
+  style.stroke-width: 2
+}
+
+compile-with-pipeline -> resolve-inheritance {
+  label: "calls"
+  style.stroke: "#7b1fa2"
+  style.stroke-width: 2
+}
+
+compile-with-pipeline -> resolve-tokens {
+  label: "calls"
+  style.stroke: "#7b1fa2"
+  style.stroke-width: 2
+}
+
+# Forma Hierarchy
+
+forma-hierarchy: {
+  shape: cylinder
+  label: "Forma Hierarchy Levels\n[:global :components\n :sections :templates :pages]"
+  style.fill: "#e1bee7"
+}
+
+resolve-inheritance -> forma-hierarchy {
+  label: "uses"
+  style.stroke: "#7b1fa2"
+}
+
+# Forma-Specific Features
+
+template-resolution: {
+  shape: class
+  label: "Template Resolution\nresolve-vars, flatten-context\n{{variable.name}}"
+  style.fill: "#ffebee"
+}
+
+htmx-support: {
+  shape: class
+  label: "HTMX Support\nhx-get, hx-target, etc."
+  style.fill: "#ffebee"
+}
+
+resource-loading: {
+  shape: class
+  label: "Resource Loading\nEDN files, platform configs"
+  style.fill: "#ffebee"
+}
+
+forma-specific -> template-resolution
+forma-specific -> htmx-support
+forma-specific -> resource-loading
+
+# Compilation Flow
+
+EDN-Input: {
+  shape: cylinder
+  label: "EDN Input\n[:button {:text \"Click\"}]"
+}
+
+Compiled-HTML: {
+  shape: cylinder
+  label: "HTML/HTMX Output\n<div>...</div>"
+}
+
+Compiled-Oxygen: {
+  shape: cylinder
+  label: "Oxygen Builder JSON\n{:element \"ct_button\" ...}"
+}
+
+# Flow Connections
+
+EDN-Input -> forma-compiler
+forma-compiler -> compile-with-pipeline
+compile-with-pipeline -> parse-element
+parse-element -> expand-properties
+expand-properties -> resolve-inheritance
+resolve-inheritance -> resolve-tokens
+resolve-tokens -> apply-styling
+apply-styling -> compile-element
+compile-element -> Compiled-HTML
+compile-element -> Compiled-Oxygen
+
+# Platform Configurations
+
+html-platform: {
+  shape: class
+  label: "HTML Platform Config\nhtml.edn"
+  style.fill: "#c8e6c9"
+}
+
+oxygen-platform: {
+  shape: class
+  label: "Oxygen Platform Config\noxygen.edn"
+  style.fill: "#c8e6c9"
+}
+
+platform-configs -> html-platform
+platform-configs -> oxygen-platform
+
+compile-element -> html-platform
+compile-element -> oxygen-platform
+
+# Example Usage
+
+usage-example: {
+  shape: class
+  label: "Usage Example:\n\n(require '[forma.compiler :as forma])\n(forma/compile-to-html\n  [[:button {:text \"Click\"}]]\n  {:tokens {...}})\n\nUses:\n- kora.core.compiler/compile-collection\n- kora.core.inheritance/resolve-inheritance\n- kora.core.tokens/resolve-tokens"
+  style.fill: "#fff9c4"
+  style.stroke-dash: 2
+}
+
+forma-compiler -> usage-example
+
+# Key Points
+
+key-points: {
+  shape: class
+  label: "Key Integration Points:\n\n1. FormaCompiler implements CompilerPipeline\n2. Uses compile-with-pipeline for orchestration\n3. Uses resolve-inheritance for property resolution\n4. Uses resolve-tokens for token.path references\n5. Provides Forma-specific implementations\n6. Extends with template resolution + HTMX"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+forma -> key-points
+

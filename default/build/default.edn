@@ -1,0 +1,100 @@
+{:build-config :default
+ :description "Default build configuration for Forma projects"
+
+ ;; Build mode (overridden by command-line)
+ :mode :production
+
+ ;; Source and output paths
+ :paths {
+   :source-dirs ["default/" "library/" "projects/"]
+   :output-dir "build/"
+   :clean-output? true
+ }
+
+ ;; Build tasks to execute (in order)
+ :tasks [:compile :optimize :minify :policy-check :assets :bundle]
+
+ ;; Compiler configuration
+ :compiler {
+   :platform-stack [:html :css :htmx]
+   :styling-system :shadcn-ui
+ }
+
+ ;; Cache configuration
+ :cache {
+   :enabled true
+   :strategy :content-hash
+   :max-size 1000
+   :ttl-ms 3600000
+   :disk-enabled? true
+ }
+
+ ;; Optimization settings
+ :optimization {
+   :enabled true
+   :dead-code-elimination? true
+   :css-deduplication? true
+   :inline-tokens? true
+   :inline-threshold 5
+ }
+
+ ;; Minification settings
+ :minification {
+   :enabled true
+   :html {
+     :enabled true
+     :remove-whitespace true
+     :remove-comments true
+     :boolean-attributes true
+     :quote-removal true
+     :redundant-attributes true
+   }
+   :css {
+     :enabled true
+     :remove-whitespace true
+     :remove-comments true
+     :hex-shortening true
+     :value-compression true
+     :font-weight-normalization true
+   }
+ }
+
+ ;; Asset pipeline settings
+ :assets {
+   :copy-static? true
+   :static-dirs ["assets/" "public/" "static/"]
+   :output-dir "build/assets/"
+   :fingerprint? true
+   :manifest-file "asset-manifest.edn"
+   :optimize-images? false
+   :extensions {
+     :copy #{"png" "jpg" "jpeg" "gif" "svg" "webp" "ico"
+             "woff" "woff2" "ttf" "otf" "eot"
+             "js" "css" "json" "xml" "txt"}
+     :optimize #{"png" "jpg" "jpeg"}
+   }
+ }
+
+ ;; Bundle settings
+ :bundle {
+   :enabled true
+   :split-css? true
+   :inline-critical-css? false
+   :split-by-route? false
+ }
+
+ ;; Policy enforcement settings (Phase 5.6)
+ :policies {
+   :enabled true
+   :configs [:design-system :accessibility :performance]
+   :on-violation :warn  ; :error, :warn, or :ignore
+   :enforce-in-dev false
+   :enforce-in-prod true
+ }
+
+ ;; Watch mode (development only)
+ :watch {
+   :enabled false
+   :debounce-ms 100
+   :ignore-patterns [".*" "*.tmp" "node_modules/**" "build/**"]
+ }}

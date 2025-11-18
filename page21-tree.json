@@ -1,0 +1,685 @@
+{
+  "root" : {
+    "id" : 1,
+    "data" : {
+      "type" : "root",
+      "properties" : [ ]
+    },
+    "children" : [ {
+      "id" : 100,
+      "data" : {
+        "type" : "EssentialElements\\Section",
+        "properties" : {
+          "design" : {
+            "layout_v2" : {
+              "layout" : "vertical"
+            }
+          }
+        }
+      },
+      "children" : [ {
+        "id" : 113,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading."
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 114,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading.",
+                "tags" : null
+              }
+            },
+            "settings" : {
+              "advanced" : {
+                "tag" : "h1"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 115,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading.",
+                "tags" : "h3"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 116,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading.",
+                "tags" : "h4"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 117,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading.",
+                "tags" : "h5"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 118,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading.",
+                "tags" : "h6"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 119,
+        "data" : {
+          "type" : "EssentialElements\\Heading",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a heading.",
+                "tags" : "h3"
+              }
+            },
+            "settings" : {
+              "advanced" : {
+                "tag" : "h6"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 120,
+        "data" : {
+          "type" : "EssentialElements\\Text",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "This is a basic text element."
+              }
+            },
+            "settings" : {
+              "advanced" : {
+                "tag" : "div"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 122,
+        "data" : {
+          "type" : "OxygenElements\\HtmlCode",
+          "properties" : null
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 123,
+        "data" : {
+          "type" : "OxygenElements\\ContainerShortcode",
+          "properties" : {
+            "settings" : {
+              "advanced" : {
+                "tag" : "div"
+              }
+            }
+          }
+        },
+        "children" : [ {
+          "id" : 124,
+          "data" : {
+            "type" : "OxygenElements\\Shortcode",
+            "properties" : null
+          },
+          "children" : [ ],
+          "_parentId" : 123
+        }, {
+          "id" : 125,
+          "data" : {
+            "type" : "OxygenElements\\CssCode",
+            "properties" : null
+          },
+          "children" : [ ],
+          "_parentId" : 123
+        }, {
+          "id" : 126,
+          "data" : {
+            "type" : "OxygenElements\\JavaScriptCode",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "javascript_code" : "alert('JavaScript code');"
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 123
+        }, {
+          "id" : 127,
+          "data" : {
+            "type" : "OxygenElements\\PhpCode",
+            "properties" : null
+          },
+          "children" : [ ],
+          "_parentId" : 123
+        } ],
+        "_parentId" : 100
+      }, {
+        "id" : 121,
+        "data" : {
+          "type" : "OxygenElements\\Text",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "text" : "Enter your text. <strong>HTML</strong> is supported."
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 101,
+        "data" : {
+          "type" : "OxygenElements\\WpWidget",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "widget" : "wp_calendar"
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 128,
+        "data" : {
+          "type" : "EssentialElements\\IconList",
+          "properties" : {
+            "content" : {
+              "content" : {
+                "list" : [ {
+                  "text" : "Automatic dimming at night",
+                  "icon" : {
+                    "slug" : "icon-moon.",
+                    "name" : "moon",
+                    "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M279.135 512c78.756 0 150.982-35.804 198.844-94.775 28.27-34.831-2.558-85.722-46.249-77.401-82.348 15.683-158.272-47.268-158.272-130.792 0-48.424 26.06-92.292 67.434-115.836 38.745-22.05 28.999-80.788-15.022-88.919A257.936 257.936 0 0 0 279.135 0c-141.36 0-256 114.575-256 256 0 141.36 114.576 256 256 256zm0-464c12.985 0 25.689 1.201 38.016 3.478-54.76 31.163-91.693 90.042-91.693 157.554 0 113.848 103.641 199.2 215.252 177.944C402.574 433.964 344.366 464 279.135 464c-114.875 0-208-93.125-208-208s93.125-208 208-208z\"/></svg>"
+                  }
+                }, {
+                  "icon" : {
+                    "slug" : "icon-lightbulb.",
+                    "name" : "lightbulb",
+                    "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 352 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16 16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06 459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32 7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7 2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0 44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42 92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64 59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24 60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0 0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55 260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z\"/></svg>"
+                  },
+                  "text" : "500 lumens of brightness"
+                }, {
+                  "icon" : {
+                    "slug" : "icon-solar-panel.",
+                    "name" : "solar panel",
+                    "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M431.98 448.01l-47.97.05V416h-128v32.21l-47.98.05c-8.82.01-15.97 7.16-15.98 15.99l-.05 31.73c-.01 8.85 7.17 16.03 16.02 16.02l223.96-.26c8.82-.01 15.97-7.16 15.98-15.98l.04-31.73c.01-8.85-7.17-16.03-16.02-16.02zM585.2 26.74C582.58 11.31 568.99 0 553.06 0H86.93C71 0 57.41 11.31 54.79 26.74-3.32 369.16.04 348.08.03 352c-.03 17.32 14.29 32 32.6 32h574.74c18.23 0 32.51-14.56 32.59-31.79.02-4.08 3.35 16.95-54.76-325.47zM259.83 64h120.33l9.77 96H250.06l9.77-96zm-75.17 256H71.09L90.1 208h105.97l-11.41 112zm16.29-160H98.24l16.29-96h96.19l-9.77 96zm32.82 160l11.4-112h149.65l11.4 112H233.77zm195.5-256h96.19l16.29 96H439.04l-9.77-96zm26.06 256l-11.4-112H549.9l19.01 112H455.33z\"/></svg>"
+                  },
+                  "text" : "Extremely energy efficient",
+                  "link" : null
+                } ],
+                "positive_icon" : [ ],
+                "negative_icon" : [ ]
+              }
+            },
+            "design" : {
+              "icon" : {
+                "size" : null,
+                "color" : null,
+                "background" : null,
+                "padding" : null,
+                "radius" : null,
+                "fill" : null,
+                "color_hover" : null,
+                "fill_hover" : null
+              },
+              "layout" : null,
+              "typography" : {
+                "color" : null,
+                "color_hover" : null,
+                "typography" : {
+                  "custom" : {
+                    "customTypography" : {
+                      "fontSize" : {
+                        "breakpoint_base" : {
+                          "number" : 14,
+                          "unit" : "px",
+                          "style" : "14px"
+                        }
+                      },
+                      "fontWeight" : {
+                        "breakpoint_base" : "500"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "children" : [ ],
+        "_parentId" : 100
+      }, {
+        "id" : 102,
+        "data" : {
+          "type" : "EssentialElements\\AdvancedAccordion",
+          "properties" : {
+            "design" : {
+              "item" : {
+                "style" : "bordered",
+                "icon" : {
+                  "icon" : {
+                    "slug" : "icon-chevron-right.",
+                    "name" : "chevron right",
+                    "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z\"/></svg>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "children" : [ {
+          "id" : 103,
+          "data" : {
+            "type" : "EssentialElements\\AccordionContent",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "icon" : {
+                    "default" : {
+                      "slug" : "icon-plus.",
+                      "name" : "plus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    },
+                    "active" : {
+                      "slug" : "icon-minus.",
+                      "name" : "minus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    }
+                  },
+                  "title" : "Content"
+                }
+              },
+              "design" : {
+                "container" : {
+                  "padding" : {
+                    "padding" : {
+                      "breakpoint_base" : {
+                        "left" : {
+                          "number" : 16,
+                          "unit" : "px",
+                          "style" : "16px"
+                        },
+                        "right" : {
+                          "number" : 16,
+                          "unit" : "px",
+                          "style" : "16px"
+                        },
+                        "top" : {
+                          "number" : 16,
+                          "unit" : "px",
+                          "style" : "16px"
+                        },
+                        "bottom" : {
+                          "number" : 16,
+                          "unit" : "px",
+                          "style" : "16px"
+                        }
+                      }
+                    }
+                  },
+                  "background" : "#E6F2FFFF"
+                },
+                "layout" : null,
+                "layout_v2" : {
+                  "layout" : "vertical",
+                  "v_gap" : {
+                    "breakpoint_base" : {
+                      "number" : 16,
+                      "unit" : "px",
+                      "style" : "16px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 104,
+            "data" : {
+              "type" : "EssentialElements\\Heading",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "McWay Falls"
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 103
+          }, {
+            "id" : 105,
+            "data" : {
+              "type" : "EssentialElements\\Text",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "McWay Falls is an 80-foot-tall waterfall on the coast of Big Sur in central California that flows year-round from McWay Creek in Julia Pfeiffer Burns State Park, about 37 miles south of Carmel, into the Pacific Ocean. During high tide, it is a tidefall, a waterfall that empties directly into the ocean"
+                  }
+                },
+                "design" : {
+                  "spacing" : {
+                    "margin_bottom" : null,
+                    "margin_top" : null
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 103
+          }, {
+            "id" : 106,
+            "data" : {
+              "type" : "EssentialElements\\Image",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "image" : {
+                      "id" : -1,
+                      "type" : "external_image",
+                      "url" : "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+                      "alt" : "",
+                      "caption" : ""
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 103
+          } ],
+          "_parentId" : 102
+        }, {
+          "id" : 107,
+          "data" : {
+            "type" : "EssentialElements\\AccordionContent",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "icon" : {
+                    "default" : {
+                      "slug" : "icon-plus.",
+                      "name" : "plus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    },
+                    "active" : {
+                      "slug" : "icon-minus.",
+                      "name" : "minus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    }
+                  },
+                  "title" : "Video"
+                }
+              },
+              "design" : {
+                "container" : {
+                  "padding" : null
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 108,
+            "data" : {
+              "type" : "EssentialElements\\Video",
+              "properties" : {
+                "content" : {
+                  "video" : {
+                    "video" : {
+                      "format" : "video",
+                      "type" : "oembed",
+                      "source" : "youtube",
+                      "embedUrl" : "https://www.youtube.com/embed/EngW7tLk6R8?feature=oembed",
+                      "title" : "Sample Videos / Dummy Videos For Demo Use",
+                      "thumbnail" : "https://i.ytimg.com/vi/EngW7tLk6R8/hqdefault.jpg",
+                      "url" : "https://www.youtube.com/watch?v=EngW7tLk6R8",
+                      "videoId" : "EngW7tLk6R8",
+                      "provider" : "youtube"
+                    }
+                  },
+                  "youtube" : {
+                    "loading_method" : "lightweight"
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 107
+          } ],
+          "_parentId" : 102
+        }, {
+          "id" : 109,
+          "data" : {
+            "type" : "EssentialElements\\AccordionContent",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "icon" : {
+                    "default" : {
+                      "slug" : "icon-plus.",
+                      "name" : "plus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    },
+                    "active" : {
+                      "slug" : "icon-minus.",
+                      "name" : "minus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    }
+                  },
+                  "title" : "Text"
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 110,
+            "data" : {
+              "type" : "EssentialElements\\RichText",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "<h2>Rich Text</h2><p>This is my rich text.</p><h3>I am a subheading</h3><p>This is <strong>more</strong> rich text.</p><ul><li><p>I am a list</p></li><li><p>Lists are cool</p></li></ul>"
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 109
+          } ],
+          "_parentId" : 102
+        }, {
+          "id" : 111,
+          "data" : {
+            "type" : "EssentialElements\\AccordionContent",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "icon" : {
+                    "default" : {
+                      "slug" : "icon-plus.",
+                      "name" : "plus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    },
+                    "active" : {
+                      "slug" : "icon-minus.",
+                      "name" : "minus",
+                      "svgCode" : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"/></svg>"
+                    }
+                  },
+                  "title" : "Testimonial"
+                }
+              },
+              "design" : {
+                "layout" : null,
+                "layout_v2" : {
+                  "layout" : "vertical",
+                  "v_align" : {
+                    "breakpoint_base" : "center"
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 112,
+            "data" : {
+              "type" : "EssentialElements\\SimpleTestimonial",
+              "properties" : {
+                "design" : {
+                  "layout" : {
+                    "width" : {
+                      "breakpoint_base" : {
+                        "number" : 520,
+                        "unit" : "px",
+                        "style" : "520px"
+                      }
+                    },
+                    "alignment" : null
+                  },
+                  "image" : {
+                    "style" : "outlined-circle",
+                    "size" : {
+                      "breakpoint_base" : {
+                        "number" : 140,
+                        "unit" : "px",
+                        "style" : "140px"
+                      }
+                    }
+                  },
+                  "quotes" : {
+                    "style" : "quotes-5",
+                    "color" : "#F5E9FFFF",
+                    "size" : {
+                      "breakpoint_base" : {
+                        "number" : 36,
+                        "unit" : "px",
+                        "style" : "36px"
+                      }
+                    },
+                    "horizontal_offset" : {
+                      "number" : 0,
+                      "unit" : "px",
+                      "style" : 0
+                    },
+                    "vertical_offset" : {
+                      "number" : 5,
+                      "unit" : "px",
+                      "style" : "5px"
+                    }
+                  },
+                  "spacing" : {
+                    "below_author" : {
+                      "breakpoint_base" : {
+                        "number" : 15,
+                        "unit" : "px",
+                        "style" : "15px"
+                      }
+                    },
+                    "below_author_info" : null,
+                    "below_testimonial" : {
+                      "breakpoint_base" : {
+                        "number" : 25,
+                        "unit" : "px",
+                        "style" : "25px"
+                      }
+                    },
+                    "below_image" : {
+                      "breakpoint_base" : {
+                        "number" : 25,
+                        "unit" : "px",
+                        "style" : "25px"
+                      }
+                    }
+                  }
+                },
+                "content" : {
+                  "content" : {
+                    "testimonial" : "Breakdance is flexible, powerful, and easy-to-use. It's everything I need to build a website.",
+                    "author" : "Louis Reingold",
+                    "author_info" : "CEO @ Breakdance",
+                    "image" : {
+                      "id" : -1,
+                      "type" : "external_image",
+                      "url" : "https://louisreingold.com/louis-reingold.jpg",
+                      "alt" : "world's best human",
+                      "caption" : ""
+                    },
+                    "image_dynamic_meta" : null
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 111
+          } ],
+          "_parentId" : 102
+        } ],
+        "_parentId" : 100
+      } ],
+      "_parentId" : 1
+    } ]
+  },
+  "_nextNodeId" : 129,
+  "status" : "exported"
+}

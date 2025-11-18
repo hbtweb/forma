@@ -1,0 +1,111 @@
+{:platform :css
+ :description "CSS styling compilation - extends HTML"
+ :extends :html
+ :compiler {
+   :output-formats {
+     :inline {
+       :description "Inline CSS styles (default)"
+       :default true
+     }
+     :css-string {
+       :description "CSS string output"
+       :minify-option true
+     }
+     :css-file {
+       :description "Write to CSS file"
+       :output-path "styles.css"
+       :minify-option true
+     }
+   }
+   :default-output-format :inline
+   :extractors {
+     :styles {
+       :type :property-selector
+       :keys [:background :color :font-size :font-weight :padding :margin :width :height :border-radius :display :flex-direction :gap :grid-template-columns :line-height :text-align :border :border-color :opacity :transform :transition]
+       :output-format :css-string
+       :output-key :style
+     }
+   }
+
+   ;; Minification operations (EDN-driven)
+   ;; These operations replace the hardcoded minify-css-string function
+   ;; Note: Pattern strings are compiled to regex in code
+   :minification {
+     :operations [
+       ;; Basic minification (always safe)
+       {:type :regex-replace
+        :pattern "/\\*.*?\\*/"
+        :replacement ""
+        :config-key :remove-comments
+        :description "Remove CSS comments"}
+
+       {:type :regex-replace
+        :pattern "\\s+"
+        :replacement " "
+        :config-key :remove-whitespace
+        :description "Collapse multiple whitespace to single space"}
+
+       ;; Color shortening
+       ;; Match: # followed by 6 hex digits where EACH PAIR has identical digits
+       ;; Pattern: #([0-9a-fA-F])\1([0-9a-fA-F])\2([0-9a-fA-F])\3
+       ;; Captures each first digit and ensures it repeats (pair matching)
+       ;; Matches: #ffffff → #fff, #ff0000 → #f00, #ff0011 → #f01
+       ;; Does NOT match: #ff0012 (third pair 12 is not identical)
+       {:type :regex-replace
+        :pattern "#([0-9a-fA-F])\\1([0-9a-fA-F])\\2([0-9a-fA-F])\\3(?![0-9a-fA-F])"
+        :replacement "#$1$2$3"
+        :config-key :shorten-colors
+        :description "Shorten hex colors (#ffffff → #fff, #ff0011 → #f01)"}
+
+       ;; Value compression - leading zeros
+       {:type :regex-replace
+        :pattern ":\\s*0+(\\.\\d+)"
+        :replacement ": $1"
+        :config-key :compress-values
+        :description "Remove leading zeros from decimals (0.5em → .5em)"}
+
+       ;; Value compression - zero units
+       ;; Match 0 with any unit (0px, 0em, etc.) in any position (after : or space)
+       {:type :regex-replace
+        :pattern "\\b0(?:px|em|rem|%|cm|mm|in|pt|pc|ex|ch|vh|vw|vmin|vmax)\\b"
+        :replacement "0"
+        :config-key :compress-values
+        :description "Remove units from zero values (0px → 0, works in multi-value properties)"}
+
+       ;; Value compression - trailing zeros
+       {:type :regex-replace
+        :pattern "(\\d+)\\.0+([a-z%]+)"
+        :replacement "$1$2"
+        :config-key :compress-values
+        :description "Remove trailing zeros (1.00em → 1em)"}
+
+       ;; Value compression - unnecessary precision
+       {:type :regex-replace
+        :pattern "(\\d+\\.\\d+?)0+([a-z%]+)"
+        :replacement "$1$2"
+        :config-key :compress-values
+        :description "Remove unnecessary precision (1.50000em → 1.5em)"}
+
+       ;; Remove spaces around delimiters
+       {:type :regex-replace
+        :pattern "\\s*([{};:,>+~])\\s*"
+        :replacement "$1"
+        :config-key :remove-delimiter-spaces
+        :description "Remove spaces around CSS delimiters"}
+
+       ;; Shorten font-weight values
+       {:type :regex-replace
+        :pattern "font-weight:\\s*normal"
+        :replacement "font-weight:400"
+        :config-key :normalize-values
+        :description "Normalize font-weight values (normal → 400)"}
+
+       {:type :regex-replace
+        :pattern "font-weight:\\s*bold"
+        :replacement "font-weight:700"
+        :config-key :normalize-values
+        :description "Normalize font-weight values (bold → 700)"}
+     ]
+     :output-formats [:css-string :css-file]
+   }
+ }}

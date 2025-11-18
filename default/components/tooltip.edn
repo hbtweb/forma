@@ -1,0 +1,7 @@
+{:tooltip
+ {:slots [:trigger :content]
+  :props [:placement :delay]
+  :a11y {:role "tooltip"}
+  :default-props {:placement :top :delay 200}
+  :schema-hints {:placement [:top :bottom :left :right]}}}
+

@@ -1,0 +1,9 @@
+{:switch
+ {:slots []
+  :props [:checked :on-checked-change :disabled :name]
+  :a11y {:role "switch" :aria-checked "{checked}"}
+  :default-props {:checked false :disabled false}
+  :schema-hints {}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Toggle switch component"}}
+

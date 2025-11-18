@@ -1,0 +1,6 @@
+{:search-input
+ {:slots []
+  :props [:placeholder :value :on-change :on-submit]
+  :a11y {:role "search" :aria-label "search"}
+  :default-props {:placeholder "Search..."}
+  :schema-hints {}}}

@@ -1,0 +1,13 @@
+{:stat-card {
+   :structure {
+     :type :div
+     :props {
+       :class "stat-card"
+     }
+   }
+   :content {
+     :title {:type :h3 :props {}}
+     :value {:type :div :props {:class "value"}}
+   }
+}}
+

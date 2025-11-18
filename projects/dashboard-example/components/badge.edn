@@ -1,0 +1,14 @@
+{:badge {
+   :structure {
+     :type :span
+     :props {
+       :class "badge"
+     }
+   }
+   :variants {
+     :success {:class "badge-success"}
+     :warning {:class "badge-warning"}
+     :danger {:class "badge-danger"}
+   }
+}}
+

@@ -1,0 +1,91 @@
+{:forma-version "1.0.0"
+ :compiler-version "1.0.0"
+ :kora-core-version "1.0.0"
+ 
+ ;; Path Configuration
+ :paths {
+   :default "default/"
+   :library "library/"
+   :projects "projects/"
+ }
+ 
+ ;; Resource Resolution Order (highest to lowest priority)
+ :resolution-order [:project :library :default]
+ 
+ ;; Default Settings
+ :defaults {
+   :platform-stack [:html :css :htmx]
+   :styling-system :shadcn-ui
+   :hierarchy-levels [:global :components :sections :templates :pages]
+  :environment :production
+ }
+ 
+ ;; Folder Structure Definitions
+ :folders {
+   :components "components/"
+   :platforms "platforms/"
+   :styles "styles/"
+   :global "global/"
+   :sections "sections/"
+   :templates "templates/"
+ }
+ 
+ ;; Feature Flags
+ :features {
+   :library-enabled true
+   :project-isolation true
+   :pre-resolution true
+   :platform-discovery true
+ }
+ 
+;; Output format defaults (platform → output format keyword)
+:output {
+  :html :html-string
+  :css :inline
+  :htmx :attributes
+}
+
+;; Minification defaults (per platform/output format)
+:minify {
+  :enabled false
+  :environment :production
+  :html {
+    :enabled true
+    :remove-whitespace true
+    :remove-comments true
+  }
+  :css {
+    :enabled true
+    :remove-whitespace true
+    :remove-comments true
+  }
+}
+
+;; Optimization defaults
+:optimization {
+  :pre-compilation false
+}
+
+;; Styling defaults
+:styling {
+  :dedupe-classes? true
+  :blank-class->nil? true
+  :apply-base-when-explicit true
+  :record-duplicate-classes? true
+}
+
+ ;; Cache Settings
+ :cache {
+   :platform-configs true
+   :hierarchy-data true
+   :styling-systems true
+   :pre-resolved-contexts true
+ }
+ 
+ ;; System Variables
+ :variables {
+   :forma-version "1.0.0"
+   :compiler-version "1.0.0"
+   :kora-core-version "1.0.0"
+ }}
+

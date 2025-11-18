@@ -1,0 +1,7 @@
+{:inline-editor
+ {:slots []
+  :props [:value :on-save :on-cancel :field-type :editable]
+  :a11y {:role "textbox"}
+  :default-props {:editable true :field-type :text}
+  :schema-hints {:field-type [:text :number :date :select]}}}
+

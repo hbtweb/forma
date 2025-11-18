@@ -1,0 +1,19 @@
+{:sidebar
+ {:base
+  {:background "$colors.background"
+   :border-right "1px solid #e5e7eb"
+   :padding "$spacing.lg"
+   :width "250px"
+   :min-height "100vh"}
+  
+  :components
+  {:navigation
+   {:display "flex"
+    :flex-direction "column"
+    :gap "$spacing.sm"}
+   
+   :link
+   {:padding "$spacing.md"
+    :border-radius "$border-radius.md"
+    :transition "all 0.2s"}}}}
+

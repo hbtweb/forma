@@ -1,0 +1,7 @@
+{:file-upload
+ {:slots []
+  :props [:accept :multiple :max-size :on-upload :on-remove :value]
+  :a11y {:role "button"}
+  :default-props {:multiple false}
+  :schema-hints {}}}
+

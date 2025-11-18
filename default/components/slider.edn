@@ -1,0 +1,9 @@
+{:slider
+ {:slots []
+  :props [:value :on-value-change :min :max :step :disabled :orientation]
+  :a11y {:role "slider" :aria-valuemin "{min}" :aria-valuemax "{max}" :aria-valuenow "{value}"}
+  :default-props {:min 0 :max 100 :step 1 :disabled false :orientation :horizontal}
+  :schema-hints {:orientation [:horizontal :vertical]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Range slider input"}}
+

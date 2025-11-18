@@ -1,0 +1,7 @@
+{:textarea
+ {:slots []
+  :props [:name :value :placeholder :required :disabled :rows :cols :maxlength :on-change]
+  :a11y {:role nil}
+  :default-props {:required false :disabled false :rows 3}
+  :schema-hints {}}}
+

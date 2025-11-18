@@ -1,0 +1,85 @@
+{:policy :design-system
+ :description "Design system consistency policies - Enforce token usage and design system compliance"
+ :version "5.6.0"
+
+ :rules [
+   ;; Token Enforcement
+   {:type :token-enforcement
+    :severity :error
+    :config-key :enforce-tokens
+    :description "Enforce token usage for colors, spacing, and typography"
+    :config {:check-colors true
+             :check-spacing true
+             :check-typography true}}
+
+   ;; Color Palette Compliance
+   {:type :color-palette
+    :severity :warning
+    :config-key :color-palette-compliance
+    :description "Enforce approved color palette usage"
+    :config {:allowed-sources [:tokens :theme]
+             :strict false}}  ; true = only tokens, false = warn on hardcoded
+
+   ;; Spacing Scale Compliance
+   {:type :spacing-scale
+    :severity :warning
+    :config-key :spacing-scale-compliance
+    :description "Enforce harmonic spacing scale usage"
+    :config {:allowed-values [:xs :sm :md :lg :xl :2xl :3xl :4xl]
+             :allow-custom false}}
+
+   ;; Typography Scale Compliance
+   {:type :typography-scale
+    :severity :warning
+    :config-key :typography-scale-compliance
+    :description "Enforce typography scale for font-size, line-height, font-weight"
+    :config {:check-font-size true
+             :check-line-height true
+             :check-font-weight true}}
+
+   ;; Border Radius Consistency
+   {:type :border-radius-consistency
+    :severity :warning
+    :config-key :border-radius-consistency
+    :description "Enforce consistent border-radius values"
+    :config {:allowed-values [:none :sm :md :lg :xl :full]
+             :allow-custom false}}
+ ]
+
+ ;; Policy-specific configuration
+ :token-enforcement {
+   :enabled true
+   :severity :error
+   :exceptions []  ; List of element types to exclude
+ }
+
+ :color-palette {
+   :enabled true
+   :severity :warning
+   :strict-mode false
+   :approved-colors [
+     :primary :secondary :success :warning :error
+     :background :foreground :muted
+   ]
+ }
+
+ :spacing-scale {
+   :enabled true
+   :severity :warning
+   :base-unit 8  ; 8px base for harmonic series
+   :ratios [1 2 3 4 5 6 8]
+ }
+
+ :typography-scale {
+   :enabled true
+   :severity :warning
+   :font-scale :modular  ; :modular or :linear
+   :base-size 16
+ }
+
+ ;; Metadata
+ :metadata {
+   :author "Forma Team"
+   :created "2025-01-13"
+   :phase "5.6"
+ }}

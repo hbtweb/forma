@@ -1,0 +1,23 @@
+{:header
+ {:base
+  {:background "$colors.background"
+   :border-bottom "1px solid #e5e7eb"
+   :padding "$spacing.md $spacing.lg"
+   :display "flex"
+   :align-items "center"
+   :justify-content "space-between"}
+  
+  :components
+  {:logo
+   {:font-size "$typography.font-size.lg"
+    :font-weight "$typography.font-weight.bold"
+    :color "$colors.primary.500"}
+   
+   :navigation
+   {:display "flex"
+    :gap "$spacing.md"}
+   
+   :button
+   {:variant :ghost
+    :size :sm}}}}
+

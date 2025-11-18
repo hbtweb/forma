@@ -1,0 +1,8 @@
+{:container
+ {:slots [:children]
+  :props [:max-width :padding]
+  :a11y {:role nil}
+  :default-props {:max-width :lg :padding :md}
+  :schema-hints {:max-width [:sm :md :lg :xl :2xl :full]
+                 :padding [:none :sm :md :lg :xl]}}}
+

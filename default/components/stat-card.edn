@@ -1,0 +1,8 @@
+{:stat-card
+ {:slots [:icon :actions]
+  :props [:title :value :change :trend :variant]
+  :a11y {:role "article"}
+  :default-props {:trend :neutral :variant :default}
+  :schema-hints {:trend [:up :down :neutral]
+                 :variant [:default :success :warning :error]}}}
+

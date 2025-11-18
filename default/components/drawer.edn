@@ -1,0 +1,9 @@
+{:drawer
+ {:slots [:trigger :content]
+  :props [:open :on-open-change :side :modal]
+  :a11y {:role "dialog" :aria-modal "true"}
+  :default-props {:open false :side :right :modal true}
+  :schema-hints {:side [:left :right :top :bottom]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Slide-out panel from screen edge"}}
+

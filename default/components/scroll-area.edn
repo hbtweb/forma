@@ -1,0 +1,10 @@
+{:scroll-area
+ {:slots [:content]
+  :props [:orientation :type]
+  :a11y {:role "region"}
+  :default-props {:orientation :vertical :type :auto}
+  :schema-hints {:orientation [:vertical :horizontal :both]
+                 :type [:auto :always :scroll :hover]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Custom scrollable area"}}
+

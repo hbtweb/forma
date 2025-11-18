@@ -1,0 +1,61 @@
+{:build-config :production
+ :description "Production build configuration - Full optimization and minification"
+
+ :mode :production
+
+ :paths {
+   :output-dir "build/prod/"
+   :clean-output? true
+ }
+
+ :tasks [:compile :optimize :minify :assets :bundle]
+
+ :cache {
+   :enabled true
+   :strategy :content-hash
+   :max-size 2000
+   :ttl-ms 86400000  ; 24 hours
+   :disk-enabled? true
+ }
+
+ :optimization {
+   :enabled true
+   :dead-code-elimination? true
+   :css-deduplication? true
+   :inline-tokens? true
+   :inline-threshold 5
+ }
+
+ :minification {
+   :enabled true
+   :html {
+     :enabled true
+     :remove-whitespace true
+     :remove-comments true
+     :boolean-attributes true
+     :quote-removal true
+     :redundant-attributes true
+   }
+   :css {
+     :enabled true
+     :remove-whitespace true
+     :remove-comments true
+     :hex-shortening true
+     :value-compression true
+     :font-weight-normalization true
+   }
+ }
+
+ :assets {
+   :copy-static? true
+   :fingerprint? true
+   :manifest-file "asset-manifest.edn"
+   :optimize-images? true
+ }
+
+ :bundle {
+   :enabled true
+   :split-css? true
+   :inline-critical-css? true
+   :split-by-route? true
+ }}

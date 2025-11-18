@@ -1,0 +1,7 @@
+{:accordion
+ {:slots [:items]
+  :props [:allow-multiple :default-open]
+  :a11y {:role "region"}
+  :default-props {:allow-multiple false :default-open []}
+  :schema-hints {}}}
+

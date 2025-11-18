@@ -1,0 +1,11 @@
+{:button-group
+ {:slots [:actions]
+  :props [:orientation :spacing]
+  :a11y {:role "group"}
+  :default-props {:orientation :horizontal :spacing :md}
+  :schema-hints {:orientation [:horizontal :vertical]
+                 :spacing [:sm :md :lg]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Group of buttons with consistent spacing"
+  :aliases [:action-group]}}
+

@@ -1,0 +1,299 @@
+{:platform :react
+ :extends :html
+ :description "React/JSX compilation with hooks and component export"
+
+ ;; Parser configuration (Platform → Forma EDN)
+ ;; Maps: Platform attribute (as it appears after JSX parsing) → Forma attribute
+ ;; Note: JSX parser already converts className→:class, onClick→:onclick
+ :parser {
+   :attribute-mappings {
+     ;; Event handlers (JSX parser gives us :onclick, we want :on-click)
+     :onclick :on-click
+     :onchange :on-change
+     :onsubmit :on-submit
+     :onfocus :on-focus
+     :onblur :on-blur
+     :onkeydown :on-key-down
+     :onkeyup :on-key-up
+     :onkeypress :on-key-press
+     :onmousedown :on-mouse-down
+     :onmouseup :on-mouse-up
+     :onmouseenter :on-mouse-enter
+     :onmouseleave :on-mouse-leave
+     :ontouchstart :on-touch-start
+     :ontouchend :on-touch-end
+     :ontouchmove :on-touch-move
+
+     ;; Special React attributes (JSX parser gives us kebab-case versions)
+     :auto-complete :autocomplete
+     :auto-focus :autofocus
+     :read-only :readonly
+     :max-length :maxlength
+     :min-length :minlength
+
+     ;; ARIA attributes (JSX parser strips "aria-" prefix, we need to restore it)
+     ;; e.g., aria-label → :label → :aria-label
+     :label :aria-label
+     :hidden :aria-hidden
+     :expanded :aria-expanded
+     :selected :aria-selected
+     :pressed :aria-pressed
+     :checked :aria-checked
+     :disabled :aria-disabled
+     :readonly :aria-readonly
+     :required :aria-required
+     :invalid :aria-invalid
+     :live :aria-live
+     :atomic :aria-atomic
+     :busy :aria-busy
+     :relevant :aria-relevant
+     :controls :aria-controls
+     :describedby :aria-describedby
+     :labelledby :aria-labelledby
+     :owns :aria-owns
+     :activedescendant :aria-activedescendant
+     :haspopup :aria-haspopup
+     :modal :aria-modal
+
+     ;; data-* attributes (JSX parser converts data-testId → :testid)
+     ;; Pattern: match any lowercase attr that might be from data-*
+     ;; This is a limitation of the current JSX parser
+     :testid :data-testid}
+
+   :style-transform {
+     :format :jsx-style-object  ; JSX uses {backgroundColor: "red"}
+     :property-transform :kebab<->camel}}  ; CSS properties in camelCase
+
+ :compiler {
+   ;; Output formats supported
+   :output-formats {
+     :jsx {
+       :description "JSX syntax (default)"
+       :file-extension ".jsx"
+       :default true}
+     :react-createElement {
+       :description "React.createElement calls"
+       :file-extension ".js"}
+     :typescript-jsx {
+       :description "TSX with TypeScript types"
+       :file-extension ".tsx"}}
+
+   :default-output-format :jsx
+
+   ;; Default element for unknown types
+   :default-element "div"
+
+   ;; Class attribute name (React uses className)
+   :class-attr :className
+
+   ;; Extractors (React-specific transformations)
+   :extractors {
+     ;; Event handlers: on-click → onClick (camelCase)
+     :events {
+       :type :attribute-selector
+       :keys [:on-click :on-change :on-submit :on-focus :on-blur
+              :on-key-down :on-key-up :on-key-press
+              :on-mouse-down :on-mouse-up :on-mouse-enter :on-mouse-leave
+              :on-touch-start :on-touch-end :on-touch-move]
+       :transform :camelCase
+       :output-format :jsx-attributes}
+
+     ;; Props: aria-label → ariaLabel (React prefers camelCase, but aria-* is exception)
+     :props {
+       :type :attribute-selector
+       :keys [:aria-* :data-* :role :tabIndex]
+       :transform :preserve-aria-data  ; aria-* and data-* stay kebab-case
+       :output-format :jsx-attributes}
+
+     ;; Styles: inline CSS properties
+     :styles {
+       :type :property-selector
+       :keys [:background :backgroundColor :color :fontSize :fontWeight :fontFamily
+              :padding :paddingTop :paddingRight :paddingBottom :paddingLeft
+              :margin :marginTop :marginRight :marginBottom :marginLeft
+              :border :borderColor :borderWidth :borderRadius
+              :width :height :minWidth :minHeight :maxWidth :maxHeight
+              :display :flexDirection :justifyContent :alignItems
+              :position :top :right :bottom :left
+              :zIndex :opacity :transform :transition]
+       :output-key :style
+       :output-format :jsx-style-object}}}
+
+ ;; Element mappings (generic Forma elements → React components)
+ :elements {
+   ;; Basic elements
+   :container {
+     :element "div"
+     :description "Generic container"}
+
+   :text {
+     :element "span"
+     :description "Text element"}
+
+   :heading {
+     :element-by-prop {
+       :level {1 "h1" 2 "h2" 3 "h3" 4 "h4" 5 "h5" 6 "h6"}}
+     :default-element "h2"
+     :description "Heading with level"}
+
+   :button {
+     :element "button"
+     :attr-map {:url :href}
+     :default-attrs {:type "button"}
+     :description "Button element"}
+
+   :link {
+     :element "a"
+     :attr-map {:url :href :target :target}
+     :description "Link element"}
+
+   :image {
+     :element "img"
+     :attr-map {:url :src :alt :alt}
+     :description "Image element"}
+
+   :input {
+     :element "input"
+     :attr-map {:input-type :type :placeholder :placeholder :value :value}
+     :default-attrs {:type "text"}
+     :description "Input field"}
+
+   :textarea {
+     :element "textarea"
+     :attr-map {:placeholder :placeholder :value :value}
+     :description "Textarea field"}
+
+   :select {
+     :element "select"
+     :attr-map {:value :value}
+     :description "Select dropdown"}
+
+   :option {
+     :element "option"
+     :attr-map {:value :value}
+     :description "Select option"}
+
+   :checkbox {
+     :element "input"
+     :attr-map {:checked :checked}
+     :default-attrs {:type "checkbox"}
+     :description "Checkbox input"}
+
+   :radio {
+     :element "input"
+     :attr-map {:checked :checked :name :name}
+     :default-attrs {:type "radio"}
+     :description "Radio button"}
+
+   :form {
+     :element "form"
+     :attr-map {:on-submit :onSubmit}
+     :default-attrs {:noValidate true}
+     :description "Form element"}
+
+   ;; Layout elements
+   :flex-container {
+     :element "div"
+     :default-attrs {:style {:display "flex"}}
+     :description "Flex container"}
+
+   :grid-container {
+     :element "div"
+     :default-attrs {:style {:display "grid"}}
+     :description "Grid container"}
+
+   ;; Semantic HTML5 elements
+   :header {
+     :element "header"
+     :description "Header section"}
+
+   :footer {
+     :element "footer"
+     :description "Footer section"}
+
+   :nav {
+     :element "nav"
+     :description "Navigation section"}
+
+   :main {
+     :element "main"
+     :description "Main content"}
+
+   :section {
+     :element "section"
+     :description "Generic section"}
+
+   :article {
+     :element "article"
+     :description "Article content"}
+
+   :aside {
+     :element "aside"
+     :description "Sidebar content"}
+
+   ;; List elements
+   :list {
+     :element-by-prop {
+       :list-type {:ordered "ol" :unordered "ul"}}
+     :default-element "ul"
+     :description "List (ordered or unordered)"}
+
+   :list-item {
+     :element "li"
+     :description "List item"}}
+
+ ;; Component mappings (React-specific patterns)
+ :component-mappings {
+   ;; State management with hooks
+   :state-manager {
+     :mappings {
+       :state :useState
+       :effect :useEffect
+       :memo :useMemo
+       :callback :useCallback
+       :ref :useRef}
+     :output-type :hook-component
+     :description "React hooks for state management"}
+
+   ;; Context API
+   :context-provider {
+     :mappings {
+       :context :createContext
+       :provider :Provider
+       :consumer :Consumer}
+     :output-type :context-component
+     :description "React Context API"}
+
+   ;; Form handling
+   :form-field {
+     :mappings {
+       :value :value
+       :on-change :onChange
+       :validation :schema}
+     :output-type :controlled-input
+     :description "Controlled form field"}}
+
+ ;; React-specific options
+ :react {
+   ;; Component export style
+   :export-style :named  ; or :default
+
+   ;; Hook dependencies
+   :generate-dependencies? true
+
+   ;; PropTypes generation
+   :generate-prop-types? false
+
+   ;; TypeScript support
+   :typescript {
+     :enabled false
+     :strict false}
+
+   ;; Fast Refresh support (hot reload)
+   :fast-refresh {
+     :enabled true
+     :preserve-local-state true}
+
+   ;; Fragment support
+   :use-fragments? true
+   :fragment-syntax :short}}  ; <></> vs React.Fragment

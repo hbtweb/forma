@@ -1,0 +1,9 @@
+{:aspect-ratio
+ {:slots [:children]
+  :props [:ratio]
+  :a11y {:role nil}
+  :default-props {:ratio "16/9"}
+  :schema-hints {:ratio ["1/1" "16/9" "4/3" "21/9" "3/2"]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Maintain aspect ratio container"}}
+

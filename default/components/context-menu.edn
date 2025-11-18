@@ -1,0 +1,9 @@
+{:context-menu
+ {:slots [:trigger :content]
+  :props [:modal]
+  :a11y {:role "menu"}
+  :default-props {:modal true}
+  :schema-hints {}
+  :platform-support [:web :desktop]
+  :platform-notes "Right-click context menu"}}
+

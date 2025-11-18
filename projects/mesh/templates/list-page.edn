@@ -1,0 +1,13 @@
+{:list-page
+ {:structure
+  [[:div {:class "page-container"}
+    [:div {:class "page-header"}
+     [:heading {:level :h1} "{resource-title}"]
+     [:action-group {:spacing :md}
+      [:button {:variant :primary} "New"]
+      [:button {:variant :outline} "Import"]
+      [:button {:variant :outline} "Export"]]]
+    [:div {:class "filters-section"}
+     [:search-input {:placeholder "Search..."}]]
+    [:data-table {:columns "{auto-columns}" :data "{resource-data}"}]
+    [:pagination {:page "{page}" :per-page "{per}" :total "{total}"}]]]}}

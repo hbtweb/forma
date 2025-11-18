@@ -1,0 +1,9 @@
+{:menubar
+ {:slots [:menus]
+  :props [:value :on-value-change]
+  :a11y {:role "menubar"}
+  :default-props {}
+  :schema-hints {}
+  :platform-support [:web :desktop]
+  :platform-notes "Horizontal menu bar for desktop applications"}}
+

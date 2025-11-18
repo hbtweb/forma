@@ -1,0 +1,14 @@
+{:footer
+ {:base
+  {:background "$colors.muted"
+   :border-top "1px solid #e5e7eb"
+   :padding "$spacing.lg"
+   :text-align "center"
+   :color "$colors.foreground"
+   :font-size "$typography.font-size.sm"}
+  
+  :components
+  {:text
+   {:color "$colors.foreground"
+    :opacity 0.7}}}}
+

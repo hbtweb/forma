@@ -1,0 +1,7 @@
+{:checkbox
+ {:slots [:label]
+  :props [:name :checked :value :required :disabled :on-change]
+  :a11y {:role "checkbox"}
+  :default-props {:checked false :required false :disabled false}
+  :schema-hints {}}}
+

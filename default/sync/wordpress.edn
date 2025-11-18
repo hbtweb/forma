@@ -1,0 +1,107 @@
+{:platform :wordpress
+ :display-name "WordPress (Oxygen/Breakdance)"
+ :description "WordPress REST API integration with support for Oxygen Builder and Breakdance page builders"
+
+ ;; Connection settings
+ :connection {:base-url-env "WORDPRESS_URL"
+              :path-prefix "/index.php?rest_route="
+              :content-type "application/json"
+              :timeout 30000}
+
+ ;; Authentication
+ ;; WordPress supports Application Passwords (Basic Auth)
+ :auth {:type :basic
+        :username-env "WORDPRESS_USER"
+        :password-env "WORDPRESS_APP_PASSWORD"}
+
+ ;; Data transformation
+ ;; Forma EDN ↔ Oxygen JSON tree
+ :compiler {:input-format :forma-edn
+            :output-format :oxygen-json
+            :compiler-ns "forma.integrations.oxygen.compiler"
+            :compile-fn "compile-to-oxygen"
+            :reverse-fn "convert-wp-tree-to-cb-elements"}
+
+ ;; API Endpoints
+ ;; Based on oxygen-rest-bridge plugin (24 endpoints)
+ :endpoints {:create {:method :post
+                      :path "/oxygen/v1/save"
+                      :description "Create a new page with Oxygen content"}
+
+             :read {:method :get
+                    :path "/oxygen/v1/page/:id"
+                    :description "Retrieve page content by ID"}
+
+             :update {:method :post
+                      :path "/oxygen/v1/save"
+                      :description "Update existing page (uses same endpoint as create)"}
+
+             :delete {:method :delete
+                      :path "/oxygen/v1/page/:id"
+                      :description "Delete a page"}
+
+             :list {:method :get
+                    :path "/oxygen/v1/pages"
+                    :description "List all pages"}
+
+             ;; Template endpoints
+             :get-template {:method :get
+                            :path "/oxygen/v1/template/:type/:id"
+                            :description "Get template (header, footer, popup, etc.)"}
+
+             :save-template {:method :post
+                             :path "/oxygen/v1/template/save"
+                             :description "Save template"}
+
+             :list-templates {:method :get
+                              :path "/oxygen/v1/templates/:type"
+                              :description "List templates by type"}
+
+             ;; Global settings
+             :get-settings {:method :get
+                            :path "/oxygen/v1/settings/global"
+                            :description "Get global Oxygen settings"}
+
+             :save-settings {:method :post
+                             :path "/oxygen/v1/settings/save"
+                             :description "Save global settings"}
+
+             ;; Cache management
+             :clear-cache {:method :post
+                           :path "/oxygen/v1/cache/clear"
+                           :description "Clear Oxygen cache"}
+
+             ;; Validation & repair
+             :validate {:method :post
+                        :path "/oxygen/v1/validate"
+                        :description "Validate page structure"}
+
+             :repair {:method :post
+                      :path "/oxygen/v1/repair/:id"
+                      :description "Repair broken page structure"}}
+
+ ;; Retry configuration
+ :retry {:max-retries 3
+         :max-delay 10000
+         :retry-on-status #{500 502 503 504}}
+
+ ;; Rate limiting
+ :rate-limit {:requests-per-minute 60
+              :burst 10}
+
+ ;; WordPress-specific metadata
+ :metadata {:post-type "page"
+            :post-status "draft"
+            :oxygen-builder-enabled true}
+
+ ;; Known capabilities
+ :capabilities #{:create :read :update :delete :list
+                 :templates :global-settings :cache-management
+                 :validation :repair}
+
+ ;; Test connection
+ ;; Use this configuration to test with a live WordPress site
+ :test {:site-url "http://hbtcomputers.com.au.test"
+        :test-user "admin"
+        :verified "2025-01-11"
+        :notes "Successfully created page ID 684 via REST API"}}

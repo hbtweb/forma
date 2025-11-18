@@ -1,0 +1,103 @@
+{:policy :performance
+ :description "Performance optimization policies - Bundle size, unused code, optimization checks"
+ :version "5.6.0"
+
+ :rules [
+   ;; Bundle Size Limits
+   {:type :bundle-size
+    :severity :error
+    :config-key :enforce-size-limits
+    :description "Enforce bundle size limits for HTML, CSS, JS"
+    :config {:limits {:html {:max-kb 500 :warn-kb 400}
+                      :css {:max-kb 100 :warn-kb 80}
+                      :js {:max-kb 200 :warn-kb 150}}}}
+
+   ;; Unused Code Detection
+   {:type :unused-code
+    :severity :warning
+    :config-key :detect-unused-code
+    :description "Detect unused tokens, components, and CSS rules"
+    :config {:threshold 0.1   ; Warn if >10% unused
+             :check [:tokens :components :css-rules]}}
+
+   ;; Optimization Required (Production Only)
+   {:type :optimization-required
+    :severity :error
+    :config-key :require-optimization
+    :description "Require optimization in production environment"
+    :config {:environment :production
+             :required {:minification true
+                       :optimization true
+                       :dead-code-elimination true}}}
+
+   ;; Image Optimization
+   {:type :image-optimization
+    :severity :warning
+    :config-key :optimize-images
+    :description "Ensure images are optimized (format, size, dimensions)"
+    :config {:max-kb 500
+             :formats [:webp :avif :jpg :png]
+             :require-dimensions true}}
+ ]
+
+ ;; Bundle Size Configuration
+ :bundle-size {
+   :enabled true
+   :limits {
+     :html {:max-kb 500 :warn-kb 400}
+     :css {:max-kb 100 :warn-kb 80}
+     :js {:max-kb 200 :warn-kb 150}
+     :total {:max-kb 800 :warn-kb 640}
+   }
+   :gzip-estimate true  ; Estimate gzipped size
+   :compression-ratio 0.3  ; Assume 30% of original size when gzipped
+ }
+
+ ;; Unused Code Configuration
+ :unused-code {
+   :enabled true
+   :threshold 0.1  ; Warn if >10% unused
+   :check-tokens true
+   :check-components true
+   :check-css-rules true
+   :exceptions []  ; Tokens/components to exclude from checks
+ }
+
+ ;; Optimization Configuration
+ :optimization {
+   :enabled true
+   :require-in-production true
+   :require-in-dev false
+   :required-optimizations {
+     :minification true
+     :dead-code-elimination true
+     :css-deduplication true
+     :tree-shaking false  ; Not implemented yet
+   }
+ }
+
+ ;; Image Optimization Configuration
+ :images {
+   :enabled true
+   :max-size-kb 500
+   :approved-formats [:webp :avif :jpg :png :svg]
+   :require-dimensions true
+   :require-alt-text true  ; Cross-check with accessibility
+   :lazy-loading-recommended true
+ }
+
+ ;; Performance Budgets
+ :budgets {
+   :page-load-time-ms 3000
+   :first-contentful-paint-ms 1500
+   :time-to-interactive-ms 5000
+   :largest-contentful-paint-ms 2500
+ }
+
+ ;; Metadata
+ :metadata {
+   :author "Forma Team"
+   :created "2025-01-13"
+   :phase "5.6"
+   :performance-reference "https://web.dev/performance/"
+ }}

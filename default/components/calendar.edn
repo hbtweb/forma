@@ -1,0 +1,7 @@
+{:calendar
+ {:slots []
+  :props [:events :view :on-event-click :on-date-click :date-range]
+  :a11y {:role "region" :aria-label "calendar"}
+  :default-props {:view :month}
+  :schema-hints {:view [:day :week :month :year]}}}
+

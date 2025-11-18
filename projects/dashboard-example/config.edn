@@ -1,0 +1,54 @@
+{:project-name "dashboard-example"
+ :description "Complex dashboard example with HTML, CSS, and HTMX"
+ 
+ :defaults {
+   :platform-stack [:html :css :htmx]
+   :styling-system :shadcn-ui
+ }
+
+ ;; Project-wide output preferences
+ :output {
+   :html :html-string
+   :css :css-string
+ }
+
+ ;; Base minification settings
+ :minify {
+   :enabled true
+   :environment :production
+   :html {
+     :enabled true
+     :remove-whitespace true
+     :remove-comments true
+   }
+   :css {
+     :enabled true
+     :remove-whitespace true
+     :remove-comments true
+   }
+ }
+
+ ;; Optimization defaults
+ :optimization {
+   :pre-compilation true
+ }
+
+ ;; Environment-specific overrides
+ :environments {
+   :development {
+     :output {:html :hiccup
+              :css :inline}
+     :minify {:enabled false}
+     :optimization {:pre-compilation false}
+   }
+   :production {
+     :output {:html :html-file}
+     :minify {:enabled true
+              :html {:enabled true
+                     :remove-whitespace true
+                     :remove-comments true
+                     :remove-optional-tags true}}
+   }
+ }
+}
+

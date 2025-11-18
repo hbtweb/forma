@@ -1,0 +1,9 @@
+{:skeleton
+ {:slots []
+  :props [:variant :width :height :circle :count]
+  :a11y {:role "status" :aria-busy "true" :aria-label "Loading..."}
+  :default-props {:variant :default :count 1}
+  :schema-hints {:variant [:default :text :circle :rectangle]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Pure CSS animation, works everywhere"}}
+

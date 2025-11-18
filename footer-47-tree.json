@@ -1,0 +1,2115 @@
+{
+  "_nextNodeId" : 174,
+  "status" : "exported",
+  "root" : {
+    "id" : 1,
+    "data" : {
+      "type" : "root",
+      "properties" : [ ]
+    },
+    "children" : [ {
+      "id" : 100,
+      "data" : {
+        "type" : "EssentialElements\\Div",
+        "properties" : {
+          "design" : {
+            "sizing" : {
+              "maxWidth" : {
+                "number" : 1400,
+                "unit" : "px"
+              }
+            },
+            "layout_v2" : {
+              "layout" : "vertical"
+            },
+            "spacing" : {
+              "margin" : {
+                "left" : "auto",
+                "right" : "auto"
+              },
+              "padding" : {
+                "left" : {
+                  "number" : 16,
+                  "unit" : "px"
+                },
+                "right" : {
+                  "number" : 16,
+                  "unit" : "px"
+                },
+                "top" : {
+                  "number" : 24,
+                  "unit" : "px"
+                },
+                "bottom" : {
+                  "number" : 24,
+                  "unit" : "px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "children" : [ {
+        "id" : 101,
+        "data" : {
+          "type" : "EssentialElements\\Div",
+          "properties" : {
+            "design" : {
+              "layout_v2" : {
+                "layout" : "grid",
+                "grid" : {
+                  "columnCount" : 4,
+                  "columnGap" : {
+                    "number" : 24,
+                    "unit" : "px"
+                  },
+                  "rowGap" : {
+                    "number" : 16,
+                    "unit" : "px"
+                  }
+                }
+              },
+              "spacing" : {
+                "margin" : {
+                  "bottom" : {
+                    "number" : 16,
+                    "unit" : "px"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "children" : [ {
+          "id" : 102,
+          "data" : {
+            "type" : "EssentialElements\\Div",
+            "properties" : {
+              "design" : {
+                "spacing" : {
+                  "padding" : {
+                    "top" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    },
+                    "bottom" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 103,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 104,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Shop",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 103
+            }, {
+              "id" : 105,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 106,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Departments",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/departments",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 105
+              }, {
+                "id" : 107,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Hot Deals",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/deals",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 105
+              }, {
+                "id" : 108,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "New Arrivals",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/new-arrivals",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 105
+              }, {
+                "id" : 109,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Gift Cards",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/gift-cards",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 105
+              }, {
+                "id" : 110,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Product Availability",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/availability",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 105
+              } ],
+              "_parentId" : 103
+            } ],
+            "_parentId" : 102
+          }, {
+            "id" : 111,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 112,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Services",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 111
+            }, {
+              "id" : 113,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 114,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Repairs and Upgrades",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/services/repairs",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 113
+              }, {
+                "id" : 115,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Custom PCs and Workstations",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/services/custom-pcs",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 113
+              }, {
+                "id" : 116,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Managed IT and MSP",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/services/business",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 113
+              }, {
+                "id" : 117,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Installations and Smart Home",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/services/installations",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 113
+              }, {
+                "id" : 118,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Book a Service",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/services/book",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 113
+              } ],
+              "_parentId" : 111
+            } ],
+            "_parentId" : 102
+          } ],
+          "_parentId" : 101
+        }, {
+          "id" : 119,
+          "data" : {
+            "type" : "EssentialElements\\Div",
+            "properties" : {
+              "design" : {
+                "spacing" : {
+                  "padding" : {
+                    "top" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    },
+                    "bottom" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 120,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 121,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Accounts",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 120
+            }, {
+              "id" : 122,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 123,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Manage Account",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/account",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 122
+              }, {
+                "id" : 124,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Track Orders",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/orders/track",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 122
+              }, {
+                "id" : 125,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Order History",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/orders/history",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 122
+              }, {
+                "id" : 126,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Wishlists and Builds",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/wishlist",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 122
+              } ],
+              "_parentId" : 120
+            } ],
+            "_parentId" : 119
+          }, {
+            "id" : 127,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 128,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Support",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 127
+            }, {
+              "id" : 129,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 130,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Help Centre",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/help",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 129
+              }, {
+                "id" : 131,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Returns and Exchanges",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/returns",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 129
+              }, {
+                "id" : 132,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Shipping and Click and Collect",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/shipping",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 129
+              }, {
+                "id" : 133,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Warranty and Protection Plans",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/warranty",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 129
+              }, {
+                "id" : 134,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Payment Options",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/payments",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 129
+              }, {
+                "id" : 135,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Recycling and E-Waste",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/recycling",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 129
+              } ],
+              "_parentId" : 127
+            } ],
+            "_parentId" : 119
+          } ],
+          "_parentId" : 101
+        }, {
+          "id" : 136,
+          "data" : {
+            "type" : "EssentialElements\\Div",
+            "properties" : {
+              "design" : {
+                "spacing" : {
+                  "padding" : {
+                    "top" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    },
+                    "bottom" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 137,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 138,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Community",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 137
+            }, {
+              "id" : 139,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 140,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "News and Updates",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/news",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 141,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Events and Workshops",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/events",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 142,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Careers in Western Australia",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/careers",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 143,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Supplier Partnerships",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/partners/suppliers",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 144,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Small Business Hub",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/business/small-business",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 145,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Local Sponsorships",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/community/sponsorships",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 146,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Creator and Student Programs",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/community/creators",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              }, {
+                "id" : 147,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Contact Us",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/contact",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 139
+              } ],
+              "_parentId" : 137
+            } ],
+            "_parentId" : 136
+          } ],
+          "_parentId" : 101
+        }, {
+          "id" : 148,
+          "data" : {
+            "type" : "EssentialElements\\Div",
+            "properties" : {
+              "design" : {
+                "spacing" : {
+                  "padding" : {
+                    "top" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    },
+                    "bottom" : {
+                      "number" : 8,
+                      "unit" : "px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 149,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 150,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Business",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 149
+            }, {
+              "id" : 151,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 152,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Business Solutions",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/business",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 151
+              }, {
+                "id" : 153,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Commercial Accounts",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/business/accounts",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 151
+              }, {
+                "id" : 154,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Partner and Reseller Portal",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/partners/resellers",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 151
+              } ],
+              "_parentId" : 149
+            } ],
+            "_parentId" : 148
+          }, {
+            "id" : 155,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 156,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Education",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 155
+            }, {
+              "id" : 157,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 158,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Education Programs",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/education",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 157
+              }, {
+                "id" : 159,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Campus and Student Offers",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/education/campus",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 157
+              }, {
+                "id" : 160,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Schools and TAFE Services",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/education/schools",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 157
+              } ],
+              "_parentId" : 155
+            } ],
+            "_parentId" : 148
+          }, {
+            "id" : 161,
+            "data" : {
+              "type" : "EssentialElements\\Div",
+              "properties" : {
+                "design" : {
+                  "spacing" : {
+                    "margin" : {
+                      "bottom" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ {
+              "id" : 162,
+              "data" : {
+                "type" : "EssentialElements\\Heading",
+                "properties" : {
+                  "content" : {
+                    "content" : {
+                      "text" : "Government",
+                      "tags" : "h3"
+                    }
+                  },
+                  "design" : {
+                    "typography" : {
+                      "size" : {
+                        "number" : 12,
+                        "unit" : "px"
+                      },
+                      "weight" : "600",
+                      "color" : "hsl(var(--foreground))"
+                    }
+                  }
+                }
+              },
+              "children" : [ ],
+              "_parentId" : 161
+            }, {
+              "id" : 163,
+              "data" : {
+                "type" : "EssentialElements\\Div",
+                "properties" : {
+                  "design" : {
+                    "spacing" : {
+                      "margin" : {
+                        "top" : {
+                          "number" : 4,
+                          "unit" : "px"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "children" : [ {
+                "id" : 164,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Government Procurement",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/government",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 163
+              }, {
+                "id" : 165,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Industry Compliance",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/government/compliance",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 163
+              }, {
+                "id" : 166,
+                "data" : {
+                  "type" : "EssentialElements\\TextLink",
+                  "properties" : {
+                    "content" : {
+                      "content" : {
+                        "text" : "Public Sector Support",
+                        "link" : {
+                          "type" : "url",
+                          "url" : "/government/support",
+                          "opensInNewTab" : false
+                        }
+                      }
+                    },
+                    "design" : {
+                      "typography" : {
+                        "size" : {
+                          "number" : 12,
+                          "unit" : "px"
+                        },
+                        "color" : "hsl(var(--muted-foreground))"
+                      },
+                      "hover" : {
+                        "typography" : {
+                          "color" : "hsl(var(--primary))"
+                        }
+                      }
+                    }
+                  }
+                },
+                "children" : [ ],
+                "_parentId" : 163
+              } ],
+              "_parentId" : 161
+            } ],
+            "_parentId" : 148
+          } ],
+          "_parentId" : 101
+        } ],
+        "_parentId" : 100
+      }, {
+        "id" : 167,
+        "data" : {
+          "type" : "EssentialElements\\Div",
+          "properties" : {
+            "design" : {
+              "border" : {
+                "top" : {
+                  "width" : {
+                    "number" : 1,
+                    "unit" : "px"
+                  },
+                  "style" : "solid",
+                  "color" : "hsl(var(--border))"
+                }
+              },
+              "spacing" : {
+                "padding" : {
+                  "top" : {
+                    "number" : 16,
+                    "unit" : "px"
+                  }
+                }
+              },
+              "layout_v2" : {
+                "layout" : "horizontal",
+                "h_align" : {
+                  "breakpoint_base" : "space-between"
+                },
+                "v_align" : {
+                  "breakpoint_base" : "center"
+                }
+              }
+            }
+          }
+        },
+        "children" : [ {
+          "id" : 168,
+          "data" : {
+            "type" : "EssentialElements\\Text",
+            "properties" : {
+              "content" : {
+                "text" : "© 2025 HBT Computers. All rights reserved."
+              },
+              "design" : {
+                "typography" : {
+                  "size" : {
+                    "number" : 12,
+                    "unit" : "px"
+                  },
+                  "color" : "hsl(var(--muted-foreground))"
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 167
+        }, {
+          "id" : 169,
+          "data" : {
+            "type" : "EssentialElements\\Div",
+            "properties" : {
+              "design" : {
+                "layout_v2" : {
+                  "layout" : "horizontal",
+                  "gap" : {
+                    "number" : 12,
+                    "unit" : "px"
+                  }
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 170,
+            "data" : {
+              "type" : "EssentialElements\\TextLink",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "Privacy",
+                    "link" : {
+                      "type" : "url",
+                      "url" : "/privacy",
+                      "opensInNewTab" : false
+                    }
+                  }
+                },
+                "design" : {
+                  "typography" : {
+                    "size" : {
+                      "number" : 12,
+                      "unit" : "px"
+                    },
+                    "color" : "hsl(var(--muted-foreground))"
+                  },
+                  "hover" : {
+                    "typography" : {
+                      "color" : "hsl(var(--primary))"
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 169
+          }, {
+            "id" : 171,
+            "data" : {
+              "type" : "EssentialElements\\TextLink",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "Terms",
+                    "link" : {
+                      "type" : "url",
+                      "url" : "/terms-site",
+                      "opensInNewTab" : false
+                    }
+                  }
+                },
+                "design" : {
+                  "typography" : {
+                    "size" : {
+                      "number" : 12,
+                      "unit" : "px"
+                    },
+                    "color" : "hsl(var(--muted-foreground))"
+                  },
+                  "hover" : {
+                    "typography" : {
+                      "color" : "hsl(var(--primary))"
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 169
+          }, {
+            "id" : 172,
+            "data" : {
+              "type" : "EssentialElements\\TextLink",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "Legal",
+                    "link" : {
+                      "type" : "url",
+                      "url" : "/legal",
+                      "opensInNewTab" : false
+                    }
+                  }
+                },
+                "design" : {
+                  "typography" : {
+                    "size" : {
+                      "number" : 12,
+                      "unit" : "px"
+                    },
+                    "color" : "hsl(var(--muted-foreground))"
+                  },
+                  "hover" : {
+                    "typography" : {
+                      "color" : "hsl(var(--primary))"
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 169
+          }, {
+            "id" : 173,
+            "data" : {
+              "type" : "EssentialElements\\TextLink",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "Sitemap",
+                    "link" : {
+                      "type" : "url",
+                      "url" : "/sitemap",
+                      "opensInNewTab" : false
+                    }
+                  }
+                },
+                "design" : {
+                  "typography" : {
+                    "size" : {
+                      "number" : 12,
+                      "unit" : "px"
+                    },
+                    "color" : "hsl(var(--muted-foreground))"
+                  },
+                  "hover" : {
+                    "typography" : {
+                      "color" : "hsl(var(--primary))"
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 169
+          } ],
+          "_parentId" : 167
+        } ],
+        "_parentId" : 100
+      } ],
+      "_parentId" : 1
+    } ]
+  }
+}

@@ -1,0 +1,7 @@
+{:wizard
+ {:slots [:steps]
+  :props [:current-step :on-step-change :on-complete :allow-skip]
+  :a11y {:role "region" :aria-label "wizard"}
+  :default-props {:current-step 0 :allow-skip false}
+  :schema-hints {}}}
+

@@ -1,0 +1,6 @@
+{:data-table
+ {:slots [:rows]
+  :props [:columns :data :sortable :filterable :selectable :pagination]
+  :a11y {:role "table"}
+  :default-props {:sortable true :filterable false :selectable false :pagination true}
+  :schema-hints {}}}

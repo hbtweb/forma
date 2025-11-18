@@ -1,0 +1,10 @@
+{:toast
+ {:slots [:title :description :action :close]
+  :props [:variant :duration :position :open :on-open-change]
+  :a11y {:role "alert" :aria-live "polite" :aria-atomic "true"}
+  :default-props {:duration 5000 :position :bottom-right :open false}
+  :schema-hints {:variant [:default :success :error :warning :info]
+                 :position [:top-left :top-center :top-right :bottom-left :bottom-center :bottom-right]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Requires DOM APIs on web, uses native notifications on desktop, SnackBar on mobile"}}
+

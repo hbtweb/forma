@@ -1,0 +1,9 @@
+{:sheet
+ {:slots [:trigger :content :header :footer]
+  :props [:open :on-open-change :side]
+  :a11y {:role "dialog" :aria-modal "true"}
+  :default-props {:open false :side :right}
+  :schema-hints {:side [:left :right :top :bottom]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Alternative name for drawer in shadcn-ui"}}
+

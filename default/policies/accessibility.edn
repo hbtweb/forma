@@ -1,0 +1,82 @@
+{:policy :accessibility
+ :description "Accessibility compliance policies - WCAG AA/AAA standards"
+ :version "5.6.0"
+
+ :rules [
+   ;; ARIA Attributes
+   {:type :aria-required
+    :severity :error
+    :config-key :require-aria
+    :description "Require ARIA attributes on interactive elements"
+    :config {}}
+
+   ;; Semantic HTML
+   {:type :semantic-html
+    :severity :warning
+    :config-key :semantic-html
+    :description "Enforce semantic HTML (headings, alt text, labels)"
+    :config {:check-headings true
+             :check-alt-text true
+             :check-labels true}}
+
+   ;; Color Contrast
+   {:type :color-contrast
+    :severity :warning
+    :config-key :color-contrast
+    :description "Enforce WCAG color contrast standards"
+    :config {:min-ratio 4.5
+             :wcag-level :AA}}  ; :AA or :AAA
+
+   ;; Keyboard Navigation
+   {:type :keyboard-navigation
+    :severity :warning
+    :config-key :keyboard-navigation
+    :description "Ensure keyboard accessibility"
+    :config {:check-tabindex true
+             :check-focus-indicator true}}
+ ]
+
+ ;; WCAG Compliance Level
+ :wcag-level :AA  ; :A, :AA, or :AAA
+
+ ;; ARIA Configuration
+ :aria {
+   :enabled true
+   :required-on-interactive true
+   :validate-roles true
+   :validate-properties true
+ }
+
+ ;; Semantic HTML Configuration
+ :semantic-html {
+   :enabled true
+   :enforce-heading-hierarchy true
+   :require-alt-text true
+   :require-form-labels true
+   :prefer-semantic-elements true  ; nav, main, article over div
+ }
+
+ ;; Color Contrast Configuration
+ :color-contrast {
+   :enabled true
+   :min-ratio 4.5  ; WCAG AA normal text
+   :min-ratio-large 3.0  ; WCAG AA large text (18pt+)
+   :wcag-level :AA
+   :check-all-combinations false  ; Only check explicit color props
+ }
+
+ ;; Keyboard Navigation Configuration
+ :keyboard {
+   :enabled true
+   :require-tabindex-on-custom true
+   :require-focus-indicators true
+   :check-skip-links false  ; Not implemented yet
+ }
+
+ ;; Metadata
+ :metadata {
+   :author "Forma Team"
+   :created "2025-01-13"
+   :phase "5.6"
+   :wcag-reference "https://www.w3.org/WAI/WCAG21/quickref/"
+ }}

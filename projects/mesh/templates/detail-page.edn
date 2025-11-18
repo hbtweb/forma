@@ -1,0 +1,13 @@
+{:detail-page
+ {:structure
+  [[:div {:class "page-container"}
+    [:div {:class "page-header"}
+     [:heading {:level :h1} "{resource-title}"]
+     [:action-group {:spacing :md}
+      [:button {:variant :primary} "Edit"]
+      [:button {:variant :outline} "Duplicate"]
+      [:button {:variant :destructive} "Delete"]]]
+    [:div {:class "detail-content"}
+     [:card {:padding :lg}
+      "{detail-fields}"]]]]}}
+

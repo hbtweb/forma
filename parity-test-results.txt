@@ -1,0 +1,97 @@
+
+ ============================================================
+Forma Compiler Parity Verification
+Comparing with corebase.ui.compiler
+============================================================
+
+=== Element Parsing Parity ===
+? PASS: Vector syntax parsing
+? PASS: Map syntax parsing
+? PASS: String element parsing
+? FAIL: Tag with classes/id
+  Expected: {:type :div}
+  Actual:   {:type :div.card#main, :props {:text "Test"}, :children []}
+
+=== Property Expansion Parity ===
+? PASS: Basic property shortcuts (:bg, :pd, :mg)
+? PASS: Text shortcut (:txt)
+? PASS: URL shortcut (:url ? :href)
+
+=== Element Compilation Parity ===
+? PASS: Compile :h1
+? PASS: Compile :h2
+? PASS: Compile :h3
+? PASS: Compile :h4
+? PASS: Compile :h5
+? PASS: Compile :h6
+? PASS: Compile :p
+? PASS: Compile :div
+? PASS: Compile :span
+? FAIL: Compile :button
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+? PASS: Compile :btn
+? FAIL: Compile :link
+  Expected: contains link
+  Actual:   <a></a>
+? FAIL: Compile :input
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+? FAIL: Compile :textarea
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+? FAIL: Compile :select
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+? PASS: Compile :img
+? PASS: Compile :video
+? FAIL: Compile legacy :container
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+? PASS: Compile legacy :text
+? PASS: Compile legacy :image
+? PASS: Compile legacy :divider
+? PASS: Compile legacy :spacer
+? PASS: Compile legacy :columns
+? PASS: Compile heading with level
+
+=== Template Resolution Parity ===
+? FAIL: Template resolution
+  Expected: no exception
+  Actual:   [:div {}] is not a valid element name.
+
+=== Style Conversion Parity ===
+? FAIL: Inline style conversion
+  Expected: contains style
+  Actual:   <div></div>
+? FAIL: HTMX attribute support
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+
+=== Nested Structures Parity ===
+? PASS: Simple nested structure
+? PASS: Deep nested structure
+? PASS: Multiple children
+
+=== Missing Features Check ===
+? PASS: Tag with classes (basic support)
+? PASS: Oxygen element: :section
+? FAIL: Oxygen element: :container
+  Expected: no exception
+  Actual:   class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+
+ ============================================================
+Summary
+============================================================
+Element Parsing:        3/4
+Property Expansion:     3/3
+Element Compilation:    18/24
+Template Resolution:   0/1
+Style Conversion:      0/2
+Nested Structures:     3/3
+Missing Features:      2/3
+------------------------------------------------------------
+Total:                 29/40
+
+? 11 test(s) failed.
+{:total 40, :passed 29, :failed 11, :all-results [{:passed 3, :total 4, :results [true true true false]} {:passed 3, :total 3, :results [true true true]} {:passed 18, :total 24, :results [true true true true true true true true true false true false false false false true true false true true true true true true]} {:passed 0, :total 1, :results [false]} {:passed 0, :total 2, :results [false false]} {:passed 3, :total 3, :results [true true true]} {:passed 2, :total 3, :results [true true false]}]}

@@ -1,0 +1,9 @@
+{:breadcrumb
+ {:slots [:items]
+  :props [:separator :max-items]
+  :a11y {:role "navigation" :aria-label "Breadcrumb"}
+  :default-props {:separator "/" :max-items nil}
+  :schema-hints {}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Navigation trail component"}}
+

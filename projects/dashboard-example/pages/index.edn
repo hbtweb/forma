@@ -1,0 +1,45 @@
+{:page {
+   :template :dashboard
+   :context {
+     :header {
+       :title "Dashboard"
+       :subtitle "Welcome back! Here's what's happening today."
+     }
+     :stats {
+       :cards [
+         {:title "Total Users" :value "12,543"}
+         {:title "Revenue" :value "$45,231"}
+         {:title "Orders" :value "1,234"}
+         {:title "Growth" :value "+12.5%"}
+       ]
+     }
+     :content {
+       :main {
+         :title "Recent Activity"
+         :table {
+           :headers ["User" "Action" "Status" "Time"]
+           :rows [
+             {:user "John Doe" :action "Order #1234" :status {:type "success" :text "Completed"} :time "2 min ago"}
+             {:user "Jane Smith" :action "Order #1235" :status {:type "warning" :text "Pending"} :time "5 min ago"}
+             {:user "Bob Johnson" :action "Order #1236" :status {:type "danger" :text "Failed"} :time "10 min ago"}
+           ]
+         }
+         :refresh-button {
+           :text "Refresh Data"
+           :hx-get "/api/refresh"
+           :hx-target ".main-content"
+           :hx-swap "outerHTML"
+         }
+       }
+       :sidebar {
+         :title "Quick Actions"
+         :actions [
+           {:text "Create New" :hx-post "/api/create" :hx-target "body" :hx-swap "beforeend"}
+           {:text "Export Data" :hx-get "/api/export"}
+           {:text "Clear Cache" :hx-delete "/api/clear" :hx-confirm "Are you sure?"}
+         ]
+       }
+     }
+   }
+}}
+

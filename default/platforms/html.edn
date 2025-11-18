@@ -1,0 +1,473 @@
+{:platform :html
+ :description "HTML SSR compilation rules"
+
+ ;; Parser configuration (Platform → Forma EDN)
+ ;; Maps: Platform attribute (as it appears after HTML parsing) → Forma attribute
+ :parser {
+   :attribute-mappings {
+     ;; Simple mappings (Platform → Forma)
+     :href :url  ; HTML href → Forma :url
+     :onclick :on-click
+     :onchange :on-change
+     :onsubmit :on-submit
+     :onfocus :on-focus
+     :onblur :on-blur
+     :onkeydown :on-key-down
+     :onkeyup :on-key-up
+     :onkeypress :on-key-press
+     :onmousedown :on-mouse-down
+     :onmouseup :on-mouse-up
+     :onmouseenter :on-mouse-enter
+     :onmouseleave :on-mouse-leave
+
+     ;; ARIA and data attributes (preserve as-is)
+     :aria-* {:transform :identity}
+     :data-* {:transform :identity}}
+
+   :style-transform {
+     :format :css-string  ; HTML uses inline style="color: red"
+     :property-transform :preserve-kebab}}  ; CSS properties stay kebab-case
+
+ :compiler {
+   :output-formats {
+     :hiccup {
+       :description "Hiccup data structure (default)"
+       :default true
+     }
+     :html-string {
+       :description "HTML string output"
+       :minify-option true
+     }
+     :html-file {
+       :description "Write to HTML file"
+       :output-path "index.html"
+       :minify-option true
+     }
+   }
+   :default-output-format :hiccup
+            :default-element "div"
+   :class-attr :class
+
+   ;; Minification operations (EDN-driven)
+   ;; These operations replace the hardcoded minify-html-string function
+   ;; Note: Pattern strings are compiled to regex in code
+   :minification {
+     :operations [
+       ;; Basic minification (always safe)
+       {:type :regex-replace
+        :pattern "<!--.*?-->"
+        :replacement ""
+        :config-key :remove-comments
+        :description "Remove HTML comments"}
+
+       ;; Context-aware whitespace removal (preserves <pre>, <script>, etc.)
+       {:type :context-aware-replace
+        :pattern "\\s+"
+        :replacement " "
+        :preserve-in-tags ["pre" "code" "textarea" "script" "style"]
+        :config-key :context-aware-whitespace
+        :description "Collapse whitespace while preserving <pre>, <code>, <textarea>, <script>, <style> content"}
+
+       ;; Inter-tag whitespace removal (safe for block elements)
+       {:type :regex-replace
+        :pattern "(?<=>)\\s+(?=<)"
+        :replacement ""
+        :config-key :remove-inter-tag-whitespace
+        :description "Remove whitespace between closing and opening tags"}
+
+       ;; Boolean attribute shortening
+       {:type :regex-replace
+        :pattern "\\s(checked|selected|disabled|readonly|multiple|autofocus|required|autoplay|controls|loop|muted|open|hidden)=\"\\1\""
+        :replacement " $1"
+        :config-key :shorten-boolean-attributes
+        :description "Shorten boolean attributes (checked=\"checked\" → checked)"}
+
+       ;; Attribute quote removal (safe values only)
+       {:type :regex-replace
+        :pattern "([a-zA-Z-]+)=\"([a-zA-Z0-9_-]+)\""
+        :replacement "$1=$2"
+        :config-key :remove-attribute-quotes
+        :description "Remove quotes from simple attribute values"}
+
+       ;; Remove redundant type attributes
+       {:type :regex-replace
+        :pattern " type=\"text/javascript\""
+        :replacement ""
+        :config-key :remove-redundant-attributes
+        :description "Remove redundant type=\"text/javascript\" from <script>"}
+
+       {:type :regex-replace
+        :pattern " type=\"text/css\""
+        :replacement ""
+        :config-key :remove-redundant-attributes
+        :description "Remove redundant type=\"text/css\" from <style>"}
+     ]
+     :output-formats [:html-string :html-file]
+   }
+ }
+ :elements
+ {:button {:element "button" 
+           :class-attr :class 
+           :attr-map {:url :href :on-click :onclick}
+           :content-source :children
+           :content-handling :resolve-vars
+           :children-handling :compile-all}
+  :badge {:element "span" 
+          :class-attr :class
+          :content-source :children
+          :content-handling :resolve-vars
+          :children-handling :compile-all}
+  :input {:element "input" 
+          :class-attr :class
+          :content-source :none
+          :content-handling :none
+          :children-handling :none
+          :attr-map {:type :type :name :name :placeholder :placeholder}}
+  :select {:element "select" 
+           :class-attr :class
+           :content-source :children
+           :content-handling :none
+           :children-handling :compile-all
+           :attr-map {:name :name}}
+  :textarea {:element "textarea" 
+             :class-attr :class
+             :content-source :children
+             :content-handling :resolve-vars
+             :children-handling :first-only
+             :attr-map {:name :name :placeholder :placeholder}}
+  :checkbox {:element "input" 
+             :type "checkbox" 
+             :class-attr :class
+             :content-source :none
+             :content-handling :none
+             :children-handling :none
+             :attr-map {:type :type :name :name}}
+  :radio {:element "input" 
+          :type "radio" 
+          :class-attr :class
+          :content-source :none
+          :content-handling :none
+          :children-handling :none
+          :attr-map {:type :type :name :name}}
+  :card {:element "div" 
+         :class-attr :class
+         :content-source :children
+         :content-handling :resolve-vars
+         :children-handling :compile-all}
+  :tabs {:element "div" 
+         :class-attr :class
+         :content-source :children
+         :content-handling :resolve-vars
+         :children-handling :compile-all}
+  :accordion {:element "div" 
+              :class-attr :class
+              :content-source :children
+              :content-handling :resolve-vars
+              :children-handling :compile-all}
+  :alert {:element "div" 
+          :class-attr :class 
+          :role "alert"
+          :content-source :children
+          :content-handling :resolve-vars
+          :children-handling :compile-all}
+  :tooltip {:element "div" 
+            :class-attr :class 
+            :role "tooltip"
+            :content-source :children
+            :content-handling :resolve-vars
+            :children-handling :compile-all}
+  :progress {:element "div" 
+             :class-attr :class 
+             :role "progressbar"
+             :content-source :children
+             :content-handling :resolve-vars
+             :children-handling :compile-all}
+  :dropdown {:element "div" 
+             :class-attr :class
+             :content-source :children
+             :content-handling :resolve-vars
+             :children-handling :compile-all}
+  :container {:element "div" 
+              :class-attr :class
+              :content-source :children
+              :content-handling :resolve-vars
+              :children-handling :compile-all}
+  :heading {:element "h2" 
+            :class-attr :class 
+            :element-by-prop {:level {:h1 "h1" :h2 "h2" :h3 "h3" :h4 "h4" :h5 "h5" :h6 "h6"}}
+            :content-source :children
+            :content-handling :resolve-vars
+            :children-handling :first-only
+            :exclude-from-styles [:level :text :content.content.text]}
+  :div {:element "div" 
+        :class-attr :class
+        :content-source :children
+        :content-handling :resolve-vars
+        :children-handling :compile-all}
+  :data-table {:element "table" 
+               :class-attr :class
+               :content-source :children
+               :content-handling :resolve-vars
+               :children-handling :compile-all}
+  :pagination {:element "nav" 
+               :class-attr :class 
+               :attr-map {:label :aria-label}
+               :content-source :children
+               :content-handling :resolve-vars
+               :children-handling :compile-all}
+  :button-group {:element "div" 
+                 :class-attr :class
+                 :content-source :children
+                 :content-handling :resolve-vars
+                 :children-handling :compile-all}
+  :search-input {:element "input" 
+                 :type "search" 
+                 :class-attr :class 
+                 :attr-map {:placeholder :placeholder :value :value}
+                 :content-source :none
+                 :content-handling :none
+                 :children-handling :none}
+  :kanban-board {:element "div" 
+                 :class-attr :class
+                 :content-source :children
+                 :content-handling :resolve-vars
+                 :children-handling :compile-all}
+  :calendar {:element "div" 
+             :class-attr :class
+             :content-source :children
+             :content-handling :resolve-vars
+             :children-handling :compile-all}
+  :timeline {:element "div" 
+             :class-attr :class
+             :content-source :children
+             :content-handling :resolve-vars
+             :children-handling :compile-all}
+  :stat-card {:element "div" 
+              :class-attr :class
+              :content-source :children
+              :content-handling :resolve-vars
+              :children-handling :compile-all}
+  :filter-panel {:element "div" 
+                 :class-attr :class
+                 :content-source :children
+                 :content-handling :resolve-vars
+                 :children-handling :compile-all}
+  :autocomplete {:element "div" 
+                 :class-attr :class
+                 :content-source :children
+                 :content-handling :resolve-vars
+                 :children-handling :compile-all}
+  :file-upload {:element "div" 
+                :class-attr :class
+                :content-source :children
+                :content-handling :resolve-vars
+                :children-handling :compile-all}
+  :rich-text-editor {:element "div" 
+                     :class-attr :class
+                     :content-source :children
+                     :content-handling :resolve-vars
+                     :children-handling :compile-all}
+  :inline-editor {:element "div" 
+                  :class-attr :class
+                  :content-source :children
+                  :content-handling :resolve-vars
+                  :children-handling :compile-all}
+  :wizard {:element "div" 
+           :class-attr :class
+           :content-source :children
+           :content-handling :resolve-vars
+           :children-handling :compile-all}
+  :quick-actions {:element "div" 
+                  :class-attr :class
+                  :content-source :children
+                  :content-handling :resolve-vars
+                  :children-handling :compile-all}
+  
+  ;; Legacy elements from case statement
+  :text {:element "p"
+         :class-attr :class
+         :content-source :text
+         :content-handling :resolve-vars
+         :children-handling :none
+         :exclude-from-styles [:text]}
+  :image {:element "img"
+          :class-attr :class
+          :content-source :none
+          :content-handling :none
+          :children-handling :none
+          :attr-map {:src :src :alt :alt}
+          :exclude-from-styles [:src :alt]}
+  :img {:element "img"
+        :class-attr :class
+        :content-source :none
+        :content-handling :none
+        :children-handling :none
+        :attr-map {:src :src :alt :alt}
+        :exclude-from-styles [:src :alt]}
+  :divider {:element "hr"
+            :class-attr :class
+            :content-source :none
+            :content-handling :none
+            :children-handling :none}
+  :spacer {:element "div"
+           :class-attr :class
+           :content-source :none
+           :content-handling :none
+           :children-handling :none}
+  :columns {:element "div"
+            :class-attr :class
+            :content-source :children
+            :content-handling :resolve-vars
+            :children-handling :compile-all
+            :default-attrs {:style {:display "grid"}}}
+  :h1 {:element "h1"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :first-only
+       :exclude-from-styles [:text :content.content.text]}
+  :h2 {:element "h2"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :first-only
+       :exclude-from-styles [:text :content.content.text]}
+  :h3 {:element "h3"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :first-only
+       :exclude-from-styles [:text :content.content.text]}
+  :h4 {:element "h4"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :first-only
+       :exclude-from-styles [:text :content.content.text]}
+  :h5 {:element "h5"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :first-only
+       :exclude-from-styles [:text :content.content.text]}
+  :h6 {:element "h6"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :first-only
+       :exclude-from-styles [:text :content.content.text]}
+  :p {:element "p"
+      :class-attr :class
+      :content-source :children
+      :content-handling :resolve-vars
+      :children-handling :first-only
+      :exclude-from-styles [:text :content.content.text]}
+  :span {:element "span"
+         :class-attr :class
+         :content-source :children
+         :content-handling :resolve-vars
+         :children-handling :first-only
+         :exclude-from-styles [:text :content.content.text]}
+  :section {:element "section"
+            :class-attr :class
+            :content-source :children
+            :content-handling :resolve-vars
+            :children-handling :compile-all}
+  :header {:element "header"
+           :class-attr :class
+           :content-source :children
+           :content-handling :resolve-vars
+           :children-handling :compile-all}
+  :footer {:element "footer"
+           :class-attr :class
+           :content-source :children
+           :content-handling :resolve-vars
+           :children-handling :compile-all}
+  :nav {:element "nav"
+        :class-attr :class
+        :content-source :children
+        :content-handling :resolve-vars
+        :children-handling :compile-all}
+  :main {:element "main"
+         :class-attr :class
+         :content-source :children
+         :content-handling :resolve-vars
+         :children-handling :compile-all}
+  :article {:element "article"
+            :class-attr :class
+            :content-source :children
+            :content-handling :resolve-vars
+            :children-handling :compile-all}
+  :aside {:element "aside"
+          :class-attr :class
+          :content-source :children
+          :content-handling :resolve-vars
+          :children-handling :compile-all}
+  :table {:element "table"
+          :class-attr :class
+          :content-source :children
+          :content-handling :resolve-vars
+          :children-handling :compile-all}
+  :thead {:element "thead"
+          :class-attr :class
+          :content-source :children
+          :content-handling :resolve-vars
+          :children-handling :compile-all}
+  :tbody {:element "tbody"
+          :class-attr :class
+          :content-source :children
+          :content-handling :resolve-vars
+          :children-handling :compile-all}
+  :tr {:element "tr"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :compile-all}
+  :th {:element "th"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :compile-all}
+  :td {:element "td"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :compile-all}
+  :ul {:element "ul"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :compile-all}
+  :ol {:element "ol"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :compile-all}
+  :li {:element "li"
+       :class-attr :class
+       :content-source :children
+       :content-handling :resolve-vars
+       :children-handling :compile-all}
+  :btn {:element "a"
+        :class-attr :class
+        :content-source :children
+        :content-handling :resolve-vars
+        :children-handling :first-only
+        :attr-map {:url :href}
+        :default-attrs {:class "btn"}
+        :exclude-from-styles [:url :text :content.content.text]}
+  :link {:element "a"
+         :class-attr :class
+         :content-source :children
+         :content-handling :resolve-vars
+         :children-handling :first-only
+         :attr-map {:url :href}
+         :exclude-from-styles [:url :text :content.content.text]}
+  :video {:element "video"
+          :class-attr :class
+          :content-source :none
+          :content-handling :none
+          :children-handling :none
+          :attr-map {:src :src}
+          :default-attrs {:controls true}
+          :exclude-from-styles [:src]}}}

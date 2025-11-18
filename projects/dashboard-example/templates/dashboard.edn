@@ -1,0 +1,14 @@
+{:dashboard {
+   :structure {
+     :type :div
+     :props {
+       :class "container"
+     }
+   }
+   :sections {
+     :header {:type :header :props {}}
+     :stats {:type :stats-grid :props {}}
+     :content {:type :content-grid :props {}}
+   }
+}}
+

@@ -1,0 +1,280 @@
+{
+  "root" : {
+    "id" : 1,
+    "data" : {
+      "type" : "root",
+      "properties" : [ ]
+    },
+    "children" : [ {
+      "id" : 111,
+      "data" : {
+        "type" : "EssentialElements\\Div",
+        "properties" : {
+          "design" : {
+            "layout_v2" : {
+              "layout" : "horizontal",
+              "h_align" : {
+                "breakpoint_base" : "center"
+              },
+              "h_vertical_align" : {
+                "breakpoint_base" : "center"
+              }
+            },
+            "container" : {
+              "width" : {
+                "breakpoint_base" : {
+                  "number" : 100,
+                  "unit" : "%",
+                  "style" : "100%"
+                }
+              }
+            }
+          }
+        }
+      },
+      "children" : [ {
+        "id" : 102,
+        "data" : {
+          "type" : "EssentialElements\\MenuBuilder",
+          "properties" : null
+        },
+        "children" : [ {
+          "id" : 103,
+          "data" : {
+            "type" : "EssentialElements\\MenuLink",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "link" : {
+                    "type" : "url",
+                    "url" : "#"
+                  },
+                  "text" : "Home"
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 102
+        }, {
+          "id" : 104,
+          "data" : {
+            "type" : "EssentialElements\\MenuDropdown",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "text" : "Products",
+                  "columns" : [ {
+                    "title" : "Airplanes",
+                    "links" : [ {
+                      "text" : "Flyer Basic",
+                      "description" : "Go fast, don't crash.",
+                      "url" : "#"
+                    }, {
+                      "text" : "Flyer Intermediate",
+                      "description" : "Go even faster and don't crash.",
+                      "url" : "#"
+                    }, {
+                      "text" : "Flyer Matrix Edition",
+                      "description" : "Haul cargo long distances."
+                    }, {
+                      "text" : "ExpressRocket",
+                      "description" : "Launch cargo into space on the cheap."
+                    }, {
+                      "text" : "Boomslang Level 1",
+                      "description" : "Get certified for night operations.",
+                      "url" : "#"
+                    } ]
+                  }, {
+                    "title" : "Helicopter",
+                    "links" : [ {
+                      "text" : "Liftmeister 21",
+                      "description" : "The ultimate light utility helicopter."
+                    }, {
+                      "text" : "Heavymeister",
+                      "description" : "Lift large amounts of weight."
+                    }, {
+                      "text" : "Triblade Vortex",
+                      "description" : "Multi-engine reliability."
+                    }, {
+                      "text" : "Rugged & Heavy Industry",
+                      "description" : "Designed to take a beating and keep flying."
+                    }, {
+                      "text" : "Identity 6000",
+                      "description" : "The ultimate in business luxury travel."
+                    } ]
+                  } ]
+                }
+              },
+              "design" : {
+                "columns" : {
+                  "stack" : null
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 102
+        }, {
+          "id" : 105,
+          "data" : {
+            "type" : "EssentialElements\\MenuDropdown",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "text" : "Use Cases",
+                  "columns" : [ {
+                    "links" : [ {
+                      "text" : "Small Business",
+                      "description" : "Accept and display widgets."
+                    }, {
+                      "text" : "Medium Business",
+                      "description" : "Widgets for teams larger than 100."
+                    }, {
+                      "text" : "Enterprise",
+                      "description" : "Enterprise-grade reliability and security."
+                    }, {
+                      "text" : "Organizations",
+                      "description" : "Do even more with widgets."
+                    } ]
+                  } ]
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 102
+        }, {
+          "id" : 106,
+          "data" : {
+            "type" : "EssentialElements\\MenuDropdown",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "text" : "Developers",
+                  "columns" : [ {
+                    "title" : "Documentation",
+                    "links" : [ {
+                      "text" : "Getting Started Guide"
+                    }, {
+                      "text" : "API Reference"
+                    }, {
+                      "text" : "Sample Code"
+                    }, {
+                      "text" : "Plugin Developer Handbook"
+                    } ]
+                  }, {
+                    "title" : "Developer Community",
+                    "links" : [ {
+                      "text" : "Forums"
+                    }, {
+                      "text" : "Slack Channel"
+                    }, {
+                      "text" : "Facebook Group"
+                    } ]
+                  } ]
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 102
+        }, {
+          "id" : 107,
+          "data" : {
+            "type" : "EssentialElements\\MenuCustomDropdown",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "text" : "About"
+                }
+              }
+            }
+          },
+          "children" : [ {
+            "id" : 108,
+            "data" : {
+              "type" : "EssentialElements\\Heading",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "Custom Dropdown",
+                    "tags" : "h5"
+                  }
+                },
+                "design" : {
+                  "spacing" : {
+                    "margin_bottom" : {
+                      "breakpoint_base" : {
+                        "number" : 12,
+                        "unit" : "px",
+                        "style" : "12px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 107
+          }, {
+            "id" : 109,
+            "data" : {
+              "type" : "EssentialElements\\Text",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "text" : "Design your dropdowns with Breakdance."
+                  }
+                },
+                "design" : {
+                  "spacing" : {
+                    "margin_bottom" : {
+                      "breakpoint_base" : {
+                        "number" : 13,
+                        "unit" : "px",
+                        "style" : "13px"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 107
+          }, {
+            "id" : 110,
+            "data" : {
+              "type" : "EssentialElements\\Image",
+              "properties" : {
+                "content" : {
+                  "content" : {
+                    "size" : null,
+                    "caption_type" : "none",
+                    "caption_position" : "below-image",
+                    "link_type" : "none",
+                    "loading" : "lazy",
+                    "image" : {
+                      "id" : -1,
+                      "type" : "external_image",
+                      "url" : "https://images.unsplash.com/photo-1573164574472-797cdf4a583a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+                      "alt" : "",
+                      "caption" : ""
+                    }
+                  }
+                }
+              }
+            },
+            "children" : [ ],
+            "_parentId" : 107
+          } ],
+          "_parentId" : 102
+        } ],
+        "_parentId" : 111
+      } ],
+      "_parentId" : 1
+    } ]
+  },
+  "_nextNodeId" : 112,
+  "status" : "exported"
+}

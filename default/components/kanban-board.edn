@@ -1,0 +1,7 @@
+{:kanban-board
+ {:slots [:columns]
+  :props [:data :on-card-move :on-card-click :grouping-field]
+  :a11y {:role "region" :aria-label "kanban board"}
+  :default-props {}
+  :schema-hints {}}}
+

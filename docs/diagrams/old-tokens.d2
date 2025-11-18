@@ -1,0 +1,121 @@
+title: "Old Compiler: Template Variable System" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Old Compiler Approach
+
+Template-System: {
+  shape: class
+  label: "Old compiler uses template variables,\nNOT a token system\n{{variable.name}} syntax for text interpolation"
+  style.fill: "#ffebee"
+  style.stroke-dash: 2
+}
+
+# Template Resolution Functions
+
+resolve-vars: {
+  shape: class
+  label: "resolve-vars"
+  description: "Resolve {{variable.name}} in text"
+  style.fill: "#e3f2fd"
+}
+
+flatten-context: {
+  shape: class
+  label: "flatten-context"
+  description: "{:customer {:name \"John\"}}\n→ {:customer.name \"John\"}"
+  style.fill: "#fff3e0"
+}
+
+# Template Syntax
+
+Template-Syntax: {
+  shape: class
+  label: "Template Syntax:\n\n{{variable.name}}\n{{customer.name}}\n{{order.total}}"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+# Context Structure
+
+Nested-Context: {
+  shape: cylinder
+  label: "Nested Context\n{:customer {:name \"John\"}\n :order {:total 100}}"
+  style.fill: "#e1bee7"
+}
+
+Flattened-Context: {
+  shape: cylinder
+  label: "Flattened Context\n{:customer.name \"John\"\n :order.total 100}"
+  style.fill: "#f3e5f5"
+}
+
+# Flow
+
+Input-Text: {
+  shape: cylinder
+  label: "Input Text\n\"Hello {{customer.name}}\""
+}
+
+Flattened: {
+  shape: cylinder
+  label: "Flattened Context\n{:customer.name \"John\"}"
+}
+
+Resolved-Text: {
+  shape: cylinder
+  label: "Resolved Text\n\"Hello John\""
+}
+
+# Resolution Process
+
+Step1: {
+  shape: class
+  label: "Step 1: Flatten context"
+  style.fill: "#fff9c4"
+}
+
+Step2: {
+  shape: class
+  label: "Step 2: Replace {{var}}"
+  style.fill: "#fff9c4"
+}
+
+Step3: {
+  shape: class
+  label: "Step 3: Return resolved text"
+  style.fill: "#fff9c4"
+}
+
+# Connections
+Input-Text -> resolve-vars
+resolve-vars -> Step1
+Step1 -> flatten-context
+flatten-context -> Nested-Context
+Nested-Context -> Flattened-Context
+Flattened-Context -> Flattened
+Flattened -> Step2
+Step2 -> Resolved-Text
+Step3 -> Resolved-Text
+
+# Usage in Compilation
+
+Compilation-Usage: {
+  shape: class
+  label: "Used in compilation:\n\nupdate props :content.content.text\n#(resolve-vars % context)"
+  style.fill: "#fff9c4"
+  style.stroke-dash: 2
+}
+
+resolve-vars -> Compilation-Usage
+
+# Comparison with Token System
+
+Comparison: {
+  shape: class
+  label: "Key Differences:\n\nOld: {{var}} for text only\nNew: token.path for any property\n\nOld: String replacement\nNew: Deep property resolution"
+  style.fill: "#fff9c4"
+  style.stroke-dash: 2
+}
+

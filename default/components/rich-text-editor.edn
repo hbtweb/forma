@@ -1,0 +1,7 @@
+{:rich-text-editor
+ {:slots []
+  :props [:value :on-change :toolbar :placeholder :readonly]
+  :a11y {:role "textbox" :aria-multiline "true"}
+  :default-props {:readonly false :toolbar :full}
+  :schema-hints {:toolbar [:minimal :basic :full]}}}
+

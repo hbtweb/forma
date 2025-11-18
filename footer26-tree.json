@@ -1,0 +1,104 @@
+{
+  "root" : {
+    "id" : 1,
+    "data" : {
+      "type" : "root",
+      "properties" : [ ]
+    },
+    "children" : [ {
+      "id" : 101,
+      "data" : {
+        "type" : "EssentialElements\\Heading",
+        "properties" : {
+          "content" : {
+            "content" : {
+              "text" : "This is a heading."
+            }
+          }
+        }
+      },
+      "children" : [ ],
+      "_parentId" : 1
+    }, {
+      "id" : 102,
+      "data" : {
+        "type" : "OxygenElements\\TextLink",
+        "properties" : {
+          "content" : {
+            "content" : {
+              "text" : "Click Here",
+              "url" : "https://oxygenbuilder.com/"
+            }
+          }
+        }
+      },
+      "children" : [ ],
+      "_parentId" : 1
+    }, {
+      "id" : 103,
+      "data" : {
+        "type" : "EssentialElements\\TextLink",
+        "properties" : {
+          "content" : {
+            "content" : {
+              "link" : {
+                "type" : "url",
+                "url" : "https://breakdance.com/"
+              },
+              "text" : "Click Here"
+            }
+          }
+        }
+      },
+      "children" : [ ],
+      "_parentId" : 1
+    }, {
+      "id" : 104,
+      "data" : {
+        "type" : "OxygenElements\\RichText",
+        "properties" : {
+          "content" : {
+            "content" : {
+              "text" : "<h2>Rich Text</h2><p>This is my rich text.</p><h3>I am a subheading</h3><p>This is <strong>more</strong> rich text.</p><ul><li><p>I am a list</p></li><li><p>Lists are cool</p></li></ul>"
+            }
+          }
+        }
+      },
+      "children" : [ ],
+      "_parentId" : 1
+    }, {
+      "id" : 105,
+      "data" : {
+        "type" : "EssentialElements\\RichText",
+        "properties" : {
+          "content" : {
+            "content" : {
+              "text" : "<h2>Rich Text</h2><p>This is my rich text.</p><h3>I am a subheading</h3><p>This is <strong>more</strong> rich text.</p><ul><li><p>I am a list</p></li><li><p>Lists are cool</p></li></ul>"
+            }
+          }
+        }
+      },
+      "children" : [ ],
+      "_parentId" : 1
+    }, {
+      "id" : 100,
+      "data" : {
+        "type" : "OxygenElements\\Component",
+        "properties" : {
+          "content" : {
+            "content" : {
+              "block" : {
+                "componentId" : 24,
+                "targets" : [ ]
+              }
+            }
+          }
+        }
+      },
+      "children" : [ ],
+      "_parentId" : 1
+    } ]
+  },
+  "_nextNodeId" : 106,
+  "status" : "exported"
+}

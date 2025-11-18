@@ -1,0 +1,106 @@
+title: "Old Compiler: No Formal Inheritance System" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Old Compiler Approach
+
+Old-Approach: {
+  shape: class
+  label: "Old compiler has NO formal inheritance system\nProperties are expanded and resolved directly"
+  style.fill: "#ffebee"
+  style.stroke-dash: 2
+}
+
+# Direct Property Processing
+
+Direct-Expansion: {
+  shape: class
+  label: "Direct Property Expansion"
+  description: "Properties expanded inline during compilation"
+  style.fill: "#fff3e0"
+}
+
+Property-Shortcuts: {
+  shape: class
+  label: "Property Shortcuts"
+  description: ":bg → :background\n:pd → :padding"
+  style.fill: "#e8f5e9"
+}
+
+Feature-Expansion: {
+  shape: class
+  label: "Feature Expansion"
+  description: ":anim :fade-in → full structure"
+  style.fill: "#e8f5e9"
+}
+
+Template-Resolution: {
+  shape: class
+  label: "Template Resolution"
+  description: "{{variable.name}} → value"
+  style.fill: "#e1bee7"
+}
+
+# Element Registry (Closest to Inheritance)
+
+Element-Registry: {
+  shape: cylinder
+  label: "Element Registry\nOxygen element definitions\n(acts as default properties)"
+  style.fill: "#f3e5f5"
+}
+
+Registry-Lookup: {
+  shape: class
+  label: "Registry Lookup"
+  description: "Get element definition from registry"
+}
+
+# Flow
+
+Input-Props: {
+  shape: cylinder
+  label: "Input Properties\n{:bg \"red\" :text \"Hello\"}"
+}
+
+Expanded: {
+  shape: cylinder
+  label: "Expanded\n{:background \"red\"}"
+}
+
+Resolved: {
+  shape: cylinder
+  label: "Resolved\n(template vars resolved)"
+}
+
+Final: {
+  shape: cylinder
+  label: "Final Properties"
+}
+
+# Connections
+Input-Props -> Direct-Expansion
+Direct-Expansion -> Property-Shortcuts
+Direct-Expansion -> Feature-Expansion
+Property-Shortcuts -> Expanded
+Feature-Expansion -> Expanded
+Expanded -> Template-Resolution
+Template-Resolution -> Resolved
+Resolved -> Final
+
+Element-Registry -> Registry-Lookup
+Registry-Lookup -> Final {
+  style.stroke-dash: 3
+  style.stroke: "#666"
+  label: "optional defaults"
+}
+
+# Comparison Note
+
+Comparison: {
+  shape: class
+  label: "Key Difference:\n\nOld: No hierarchy, direct expansion\nNew: Multi-level inheritance system"
+  style.fill: "#fff9c4"
+  style.stroke-dash: 2
+}
+

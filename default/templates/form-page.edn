@@ -1,0 +1,12 @@
+{:form-page
+ {:structure
+  [[:div {:class "page-container"}
+    [:div {:class "page-header"}
+     [:heading {:level :h1} "{form-title}"]
+     [:action-group {:spacing :md}
+      [:button {:variant :primary :type "submit"} "Save"]
+      [:button {:variant :outline :type "button"} "Cancel"]]]
+    [:card {:padding :lg}
+     [:form {:class "form-grid"}
+      "{form-fields}"]]]]}}
+

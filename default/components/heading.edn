@@ -1,0 +1,6 @@
+{:heading
+ {:slots [:text]
+  :props [:level :id]
+  :a11y {:role nil}
+  :default-props {:level :h2}
+  :schema-hints {:level [:h1 :h2 :h3 :h4 :h5 :h6]}}}

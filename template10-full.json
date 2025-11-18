@@ -1,0 +1,100 @@
+{
+  "root" : {
+    "id" : 1,
+    "data" : {
+      "type" : "root",
+      "properties" : [ ]
+    },
+    "children" : [ {
+      "id" : 103,
+      "data" : {
+        "type" : "EssentialElements\\Section",
+        "properties" : {
+          "design" : {
+            "layout_v2" : {
+              "layout" : "horizontal",
+              "h_align" : {
+                "breakpoint_base" : "space-between"
+              },
+              "h_vertical_align" : {
+                "breakpoint_base" : "center"
+              },
+              "h_vertical_at" : "breakpoint_phone_landscape"
+            },
+            "background" : {
+              "color" : "#E2D8FFFF"
+            }
+          }
+        }
+      },
+      "children" : [ {
+        "id" : 106,
+        "data" : {
+          "type" : "EssentialElements\\Div",
+          "properties" : {
+            "settings" : {
+              "advanced" : {
+                "tag" : "div"
+              }
+            }
+          }
+        },
+        "children" : [ {
+          "id" : 100,
+          "data" : {
+            "type" : "EssentialElements\\Heading",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "text" : "This is a heading."
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 106
+        }, {
+          "id" : 101,
+          "data" : {
+            "type" : "EssentialElements\\Text",
+            "properties" : {
+              "content" : {
+                "content" : {
+                  "text" : "This is a basic text element."
+                }
+              }
+            }
+          },
+          "children" : [ ],
+          "_parentId" : 106
+        } ],
+        "_parentId" : 103
+      }, {
+        "id" : 105,
+        "data" : {
+          "type" : "EssentialElements\\Div",
+          "properties" : {
+            "settings" : {
+              "advanced" : {
+                "tag" : "div"
+              }
+            }
+          }
+        },
+        "children" : [ {
+          "id" : 104,
+          "data" : {
+            "type" : "EssentialElements\\Button",
+            "properties" : null
+          },
+          "children" : [ ],
+          "_parentId" : 105
+        } ],
+        "_parentId" : 103
+      } ],
+      "_parentId" : 1
+    } ]
+  },
+  "_nextNodeId" : 107,
+  "status" : "exported"
+}

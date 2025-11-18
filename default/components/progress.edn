@@ -1,0 +1,7 @@
+{:progress
+ {:slots []
+  :props [:value :max :variant :show-label]
+  :a11y {:role "progressbar" :aria-valuenow "{value}" :aria-valuemin "0" :aria-valuemax "{max}"}
+  :default-props {:max 100 :variant :default :show-label true}
+  :schema-hints {:variant [:default :success :warning :error]}}}
+

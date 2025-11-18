@@ -1,0 +1,9 @@
+{:dialog
+ {:slots [:trigger :content :header :footer :title :description]
+  :props [:open :on-open-change :modal]
+  :a11y {:role "dialog" :aria-modal "true" :aria-labelledby "dialog-title" :aria-describedby "dialog-description"}
+  :default-props {:open false :modal true}
+  :schema-hints {}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Modal dialog component (alias for modal)"}}
+

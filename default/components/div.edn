@@ -1,0 +1,6 @@
+{:div
+ {:slots [:children]
+  :props [:id :class :style]
+  :a11y {:role nil}
+  :default-props {}
+  :schema-hints {}}}

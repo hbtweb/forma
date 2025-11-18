@@ -1,0 +1,21 @@
+{:dashboard
+ {:structure
+  [[:div {:class "page-container"}
+    [:div {:class "page-header"}
+     [:heading {:level :h1} "{dashboard-title}"]
+     [:action-group {:spacing :md}
+      [:button {:variant :outline} "Refresh"]
+      [:button {:variant :outline} "Export"]]]
+    [:div {:class "dashboard-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"}
+     [:stat-card {:title "Total Revenue" :value "{revenue}" :trend :up :change "+12%"}]
+     [:stat-card {:title "Active Tickets" :value "{tickets}" :trend :down :change "-3%"}]
+     [:stat-card {:title "New Customers" :value "{customers}" :trend :up :change "+8%"}]
+     [:stat-card {:title "Pending Invoices" :value "{invoices}" :trend :neutral}]]
+    [:div {:class "dashboard-content"}
+     [:card {:padding :lg}
+      [:heading {:level :h3} "Recent Activity"]
+      [:timeline {:data "{activity-data}"}]]
+     [:card {:padding :lg}
+      [:heading {:level :h3} "Quick Actions"]
+      [:quick-actions {:actions "{quick-actions-data}"}]]]]]}}
+

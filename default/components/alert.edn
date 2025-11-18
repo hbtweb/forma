@@ -1,0 +1,7 @@
+{:alert
+ {:slots [:title :description :actions]
+  :props [:variant :dismissible :on-dismiss]
+  :a11y {:role "alert"}
+  :default-props {:variant :info :dismissible false}
+  :schema-hints {:variant [:success :info :warning :error]}}}
+

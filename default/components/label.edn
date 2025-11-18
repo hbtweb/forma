@@ -1,0 +1,9 @@
+{:label
+ {:slots [:text]
+  :props [:for :required]
+  :a11y {:role nil}
+  :default-props {:required false}
+  :schema-hints {}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Form label with for attribute linking to input"}}
+

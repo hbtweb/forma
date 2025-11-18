@@ -1,0 +1,9 @@
+{:navigation-menu
+ {:slots [:items :viewport]
+  :props [:value :on-value-change :orientation]
+  :a11y {:role "navigation"}
+  :default-props {:orientation :horizontal}
+  :schema-hints {:orientation [:horizontal :vertical]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Complex navigation with submenus"}}
+

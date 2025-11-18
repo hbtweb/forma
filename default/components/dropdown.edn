@@ -1,0 +1,7 @@
+{:dropdown
+ {:slots [:trigger :menu]
+  :props [:open :on-open-change :placement]
+  :a11y {:role "menu"}
+  :default-props {:open false :placement :bottom-start}
+  :schema-hints {:placement [:top-start :top-end :bottom-start :bottom-end :left :right]}}}
+

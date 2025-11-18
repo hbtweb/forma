@@ -1,0 +1,7 @@
+{:input
+ {:slots []
+  :props [:type :name :value :placeholder :required :disabled :pattern :min :max :on-change :on-blur]
+  :a11y {:role nil}
+  :default-props {:type "text" :required false :disabled false}
+  :schema-hints {:type [:text :email :password :number :tel :url :date :time :datetime-local :search]}}}
+

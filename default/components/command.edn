@@ -1,0 +1,9 @@
+{:command
+ {:slots [:input :list :empty]
+  :props [:open :on-open-change :filter :placeholder]
+  :a11y {:role "combobox" :aria-expanded "{open}"}
+  :default-props {:open false :placeholder "Type a command..."}
+  :schema-hints {}
+  :platform-support [:web :desktop]
+  :platform-notes "Command palette with keyboard navigation, web/desktop only"}}
+

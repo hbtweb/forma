@@ -1,0 +1,170 @@
+title: "Kora Core Token System" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Main Resolution Function
+
+resolve-tokens: {
+  shape: class
+  label: "resolve-tokens"
+  description: "Resolve all token references in props"
+  style.fill: "#e3f2fd"
+}
+
+# Core Functions
+
+parse-token-path: {
+  shape: class
+  label: "parse-token-path\n\"token.colors.primary\"\n→ [:colors :primary]"
+  style.fill: "#fff3e0"
+}
+
+resolve-token-reference: {
+  shape: class
+  label: "resolve-token-reference"
+  description: "Resolve single token\nwith optional fallback"
+  style.fill: "#fff3e0"
+}
+
+resolve-token-with-fallback: {
+  shape: class
+  label: "resolve-token-with-fallback\n\"token.path || fallback\""
+  style.fill: "#f3e5f5"
+}
+
+resolve-tokens-in-value: {
+  shape: class
+  label: "resolve-tokens-in-value"
+  description: "Recursive resolution\nfor nested structures"
+  style.fill: "#f3e5f5"
+}
+
+validate-tokens: {
+  shape: class
+  label: "validate-tokens"
+  description: "Check all tokens resolvable"
+  style.fill: "#ffebee"
+}
+
+# Token Syntax
+
+Token-Syntax: {
+  shape: class
+  label: "Token Syntax:\n\ntoken.path\ncolors.primary\nspacing.md\ntypography.button.font-size"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+Fallback-Syntax: {
+  shape: class
+  label: "Fallback Syntax:\n\ntoken.path || fallback\ncolors.primary || #ffffff"
+  style.fill: "#fff3e0"
+  style.stroke-dash: 2
+}
+
+# Token Definitions
+
+Token-Definitions: {
+  shape: cylinder
+  label: "Token Definitions\n{:colors {:primary \"#4f46e5\"}\n :spacing {:md \"12px\"}}"
+  style.fill: "#e1bee7"
+}
+
+# Flow
+
+Input-Props: {
+  shape: cylinder
+  label: "Input Properties\n{:bg \"token.colors.primary\"\n :pd \"token.spacing.md\"}"
+}
+
+Parsed-Paths: {
+  shape: cylinder
+  label: "Parsed Paths\n[:colors :primary]\n[:spacing :md]"
+}
+
+Resolved-Values: {
+  shape: cylinder
+  label: "Resolved Values\n\"#4f46e5\"\n\"12px\""
+}
+
+Output-Props: {
+  shape: cylinder
+  label: "Output Properties\n{:bg \"#4f46e5\"\n :pd \"12px\"}"
+}
+
+# Resolution Process
+
+Step1: {
+  shape: class
+  label: "Step 1: Parse token paths"
+  style.fill: "#fff9c4"
+}
+
+Step2: {
+  shape: class
+  label: "Step 2: Lookup in definitions"
+  style.fill: "#fff9c4"
+}
+
+Step3: {
+  shape: class
+  label: "Step 3: Apply fallback if needed"
+  style.fill: "#fff9c4"
+}
+
+Step4: {
+  shape: class
+  label: "Step 4: Replace in props"
+  style.fill: "#fff9c4"
+}
+
+# Connections
+Input-Props -> resolve-tokens
+resolve-tokens -> Step1
+Step1 -> parse-token-path
+parse-token-path -> Parsed-Paths
+Parsed-Paths -> Step2
+Step2 -> resolve-token-reference
+resolve-token-reference -> Token-Definitions
+Token-Definitions -> Resolved-Values
+Resolved-Values -> Step3
+Step3 -> resolve-token-with-fallback
+resolve-token-with-fallback -> Step4
+Step4 -> Output-Props
+
+resolve-tokens -> resolve-tokens-in-value
+resolve-tokens-in-value -> resolve-token-with-fallback
+resolve-token-with-fallback -> resolve-token-reference
+resolve-token-reference -> parse-token-path
+
+validate-tokens -> parse-token-path
+validate-tokens -> Token-Definitions
+
+# Supported Value Types
+
+String-Tokens: {
+  shape: class
+  label: "String Tokens\n\"token.colors.primary\""
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+Nested-Maps: {
+  shape: class
+  label: "Nested Maps\n{:bg \"token.colors.primary\"}"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+Nested-Vectors: {
+  shape: class
+  label: "Nested Vectors\n[\"token.spacing.sm\" \"token.spacing.md\"]"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+resolve-tokens-in-value -> String-Tokens
+resolve-tokens-in-value -> Nested-Maps
+resolve-tokens-in-value -> Nested-Vectors
+

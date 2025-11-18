@@ -1,0 +1,736 @@
+﻿{
+    "id":  "59",
+    "title":  "Oxygen Advanced Features Test",
+    "post_type":  "page",
+    "status":  "draft",
+    "url":  "http://hbtcomputers.com.au.test/?page_id=59",
+    "edit_url":  "http://hbtcomputers.com.au.test/wp-admin/admin.php?page=breakdance\u0026oxygen=builder\u0026id=59",
+    "tree":  {
+                 "root":  {
+                              "id":  1,
+                              "data":  {
+                                           "type":  "root",
+                                           "properties":  [
+
+                                                          ]
+                                       },
+                              "children":  [
+                                               {
+                                                   "id":  10,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Section",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "sizing":  {
+                                                                                                                 "minHeight":  {
+                                                                                                                                   "number":  300,
+                                                                                                                                   "unit":  "px"
+                                                                                                                               }
+                                                                                                             },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  40,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  40,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "background":  {
+                                                                                                                     "gradient":  "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+                                                                                                                 }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  11,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Heading",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 1: Gradient Background",
+                                                                                                                                        "tags":  "h2"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  24,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   },
+                                                                                                                                          "weight":  "700",
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  10
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  100,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Section",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "sizing":  {
+                                                                                                                 "minHeight":  {
+                                                                                                                                   "number":  300,
+                                                                                                                                   "unit":  "px"
+                                                                                                                               }
+                                                                                                             },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  40,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  40,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "background":  {
+                                                                                                                     "gradient":  "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                                                                                                                     "type":  "gradient"
+                                                                                                                 }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  101,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Heading",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 1b: Gradient Background",
+                                                                                                                                        "tags":  "h2"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  24,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   },
+                                                                                                                                          "weight":  "700",
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  100
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  102,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Section",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "sizing":  {
+                                                                                                                 "minHeight":  {
+                                                                                                                                   "number":  300,
+                                                                                                                                   "unit":  "px"
+                                                                                                                               }
+                                                                                                             },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  40,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  40,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "background":  {
+                                                                                                                     "gradient":  {
+                                                                                                                                      "points":  [
+                                                                                                                                                     {
+                                                                                                                                                         "left":  0,
+                                                                                                                                                         "red":  0,
+                                                                                                                                                         "green":  0,
+                                                                                                                                                         "blue":  0,
+                                                                                                                                                         "alpha":  1
+                                                                                                                                                     },
+                                                                                                                                                     {
+                                                                                                                                                         "left":  100,
+                                                                                                                                                         "red":  255,
+                                                                                                                                                         "green":  0,
+                                                                                                                                                         "blue":  0,
+                                                                                                                                                         "alpha":  1
+                                                                                                                                                     }
+                                                                                                                                                 ],
+                                                                                                                                      "type":  "linear",
+                                                                                                                                      "degree":  90,
+                                                                                                                                      "svgValue":  "\u003clinearGradient x1=\"0\" y1=\"0.5\" x2=\"1\" y2=\"0.5\" id=\"%%GRADIENTID%%\"\u003e\u003cstop stop-opacity=\"1\" stop-color=\"#000000\" offset=\"0\"\u003e\u003c/stop\u003e\u003cstop stop-opacity=\"1\" stop-color=\"#ff0000\" offset=\"1\"\u003e\u003c/stop\u003e\u003c/linearGradient\u003e",
+                                                                                                                                      "value":  "linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,rgba(255, 0, 0, 1) 100%)"
+                                                                                                                                  },
+                                                                                                                     "type":  "gradient"
+                                                                                                                 }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  103,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Heading",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 1c: Gradient Background",
+                                                                                                                                        "tags":  "h2"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  24,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   },
+                                                                                                                                          "weight":  "700",
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  102
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  104,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Section",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "sizing":  {
+                                                                                                                 "minHeight":  {
+                                                                                                                                   "number":  300,
+                                                                                                                                   "unit":  "px"
+                                                                                                                               }
+                                                                                                             },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  40,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  40,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "background":  {
+                                                                                                                     "gradient":  {
+                                                                                                                                      "points":  [
+                                                                                                                                                     {
+                                                                                                                                                         "left":  0,
+                                                                                                                                                         "red":  0,
+                                                                                                                                                         "green":  0,
+                                                                                                                                                         "blue":  0,
+                                                                                                                                                         "alpha":  1
+                                                                                                                                                     },
+                                                                                                                                                     {
+                                                                                                                                                         "left":  100,
+                                                                                                                                                         "red":  255,
+                                                                                                                                                         "green":  0,
+                                                                                                                                                         "blue":  0,
+                                                                                                                                                         "alpha":  1
+                                                                                                                                                     }
+                                                                                                                                                 ],
+                                                                                                                                      "type":  "radial",
+                                                                                                                                      "degree":  0,
+                                                                                                                                      "svgValue":  "\u003cradialGradient id=\"%%GRADIENTID%%\"\u003e\u003cstop stop-opacity=\"1\" stop-color=\"#000000\" offset=\"0\"\u003e\u003c/stop\u003e\u003cstop stop-opacity=\"1\" stop-color=\"#ff0000\" offset=\"1\"\u003e\u003c/stop\u003e\u003c/radialGradient\u003e",
+                                                                                                                                      "value":  "radial-gradient(rgba(0, 0, 0, 1) 0%,rgba(255, 0, 0, 1) 100%)"
+                                                                                                                                  },
+                                                                                                                     "type":  "gradient"
+                                                                                                                 }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  105,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Heading",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 1d: Gradient Background",
+                                                                                                                                        "tags":  "h2"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  24,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   },
+                                                                                                                                          "weight":  "700",
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  104
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  20,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Div",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "background":  {
+                                                                                                                     "color":  "#ffffff"
+                                                                                                                 },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  24,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  24,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             },
+                                                                                                                                  "left":  {
+                                                                                                                                               "number":  24,
+                                                                                                                                               "unit":  "px"
+                                                                                                                                           },
+                                                                                                                                  "right":  {
+                                                                                                                                                "number":  24,
+                                                                                                                                                "unit":  "px"
+                                                                                                                                            }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "borders":  {
+                                                                                                                  "border":  {
+                                                                                                                                 "top":  {
+                                                                                                                                             "width":  {
+                                                                                                                                                           "number":  1,
+                                                                                                                                                           "unit":  "px"
+                                                                                                                                                       },
+                                                                                                                                             "style":  "solid",
+                                                                                                                                             "color":  "#e5e7eb"
+                                                                                                                                         }
+                                                                                                                             },
+                                                                                                                  "radius":  {
+                                                                                                                                 "topLeft":  {
+                                                                                                                                                 "number":  8,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             },
+                                                                                                                                 "topRight":  {
+                                                                                                                                                  "number":  8,
+                                                                                                                                                  "unit":  "px"
+                                                                                                                                              },
+                                                                                                                                 "bottomLeft":  {
+                                                                                                                                                    "number":  8,
+                                                                                                                                                    "unit":  "px"
+                                                                                                                                                },
+                                                                                                                                 "bottomRight":  {
+                                                                                                                                                     "number":  8,
+                                                                                                                                                     "unit":  "px"
+                                                                                                                                                 }
+                                                                                                                             }
+                                                                                                              },
+                                                                                                  "hover":  {
+                                                                                                                "transform":  "translateY(-4px)",
+                                                                                                                "boxShadow":  [
+                                                                                                                                  {
+                                                                                                                                      "x":  {
+                                                                                                                                                "number":  0,
+                                                                                                                                                "unit":  "px"
+                                                                                                                                            },
+                                                                                                                                      "y":  {
+                                                                                                                                                "number":  10,
+                                                                                                                                                "unit":  "px"
+                                                                                                                                            },
+                                                                                                                                      "blur":  {
+                                                                                                                                                   "number":  30,
+                                                                                                                                                   "unit":  "px"
+                                                                                                                                               },
+                                                                                                                                      "spread":  {
+                                                                                                                                                     "number":  0,
+                                                                                                                                                     "unit":  "px"
+                                                                                                                                                 },
+                                                                                                                                      "color":  "rgba(0,0,0,0.15)"
+                                                                                                                                  }
+                                                                                                                              ]
+                                                                                                            }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  21,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Text",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 2: Hover State (hover over me)"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  16,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   }
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  20
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  106,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Div",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "background":  {
+                                                                                                                     "color":  "#ffffff",
+                                                                                                                     "color_hover":  "#642EDAFF"
+                                                                                                                 },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  24,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  24,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             },
+                                                                                                                                  "left":  {
+                                                                                                                                               "number":  24,
+                                                                                                                                               "unit":  "px"
+                                                                                                                                           },
+                                                                                                                                  "right":  {
+                                                                                                                                                "number":  24,
+                                                                                                                                                "unit":  "px"
+                                                                                                                                            }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "borders":  {
+                                                                                                                  "border":  {
+                                                                                                                                 "top":  {
+                                                                                                                                             "width":  {
+                                                                                                                                                           "number":  1,
+                                                                                                                                                           "unit":  "px"
+                                                                                                                                                       },
+                                                                                                                                             "style":  "solid",
+                                                                                                                                             "color":  "#e5e7eb"
+                                                                                                                                         }
+                                                                                                                             },
+                                                                                                                  "radius":  {
+                                                                                                                                 "topLeft":  {
+                                                                                                                                                 "number":  8,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             },
+                                                                                                                                 "topRight":  {
+                                                                                                                                                  "number":  8,
+                                                                                                                                                  "unit":  "px"
+                                                                                                                                              },
+                                                                                                                                 "bottomLeft":  {
+                                                                                                                                                    "number":  8,
+                                                                                                                                                    "unit":  "px"
+                                                                                                                                                },
+                                                                                                                                 "bottomRight":  {
+                                                                                                                                                     "number":  8,
+                                                                                                                                                     "unit":  "px"
+                                                                                                                                                 }
+                                                                                                                             }
+                                                                                                              },
+                                                                                                  "hover":  {
+                                                                                                                "transform":  "translateY(-4px)",
+                                                                                                                "boxShadow":  [
+                                                                                                                                  {
+                                                                                                                                      "x":  {
+                                                                                                                                                "number":  0,
+                                                                                                                                                "unit":  "px"
+                                                                                                                                            },
+                                                                                                                                      "y":  {
+                                                                                                                                                "number":  10,
+                                                                                                                                                "unit":  "px"
+                                                                                                                                            },
+                                                                                                                                      "blur":  {
+                                                                                                                                                   "number":  30,
+                                                                                                                                                   "unit":  "px"
+                                                                                                                                               },
+                                                                                                                                      "spread":  {
+                                                                                                                                                     "number":  0,
+                                                                                                                                                     "unit":  "px"
+                                                                                                                                                 },
+                                                                                                                                      "color":  "rgba(0,0,0,0.15)"
+                                                                                                                                  }
+                                                                                                                              ]
+                                                                                                            }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  107,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Text",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 2: Hover State (hover over me)"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  16,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   }
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  106
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  30,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Div",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "background":  {
+                                                                                                                     "color":  "#667eea"
+                                                                                                                 },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  24,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  24,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "effects":  {
+                                                                                                                  "transition":  {
+                                                                                                                                     "property":  "all",
+                                                                                                                                     "duration":  "0.3s",
+                                                                                                                                     "timing":  "ease"
+                                                                                                                                 }
+                                                                                                              }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  31,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Text",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 3: Transition Effect"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  30
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  108,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Div",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "background":  {
+                                                                                                                     "color":  "#667eea",
+                                                                                                                     "transition_duration":  {
+                                                                                                                                                 "number":  1000,
+                                                                                                                                                 "unit":  "ms",
+                                                                                                                                                 "style":  "1000ms"
+                                                                                                                                             },
+                                                                                                                     "type":  null,
+                                                                                                                     "overlay":  {
+                                                                                                                                     "color":  "#100"
+                                                                                                                                 },
+                                                                                                                     "color_hover":  "#583D92FF"
+                                                                                                                 },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  24,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  24,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "effects":  {
+                                                                                                                  "transition":  {
+                                                                                                                                     "property":  "all",
+                                                                                                                                     "duration":  "0.3s",
+                                                                                                                                     "timing":  "ease"
+                                                                                                                                 }
+                                                                                                              }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  109,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Text",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 3: Transition Effect"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  108
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               },
+                                               {
+                                                   "id":  40,
+                                                   "data":  {
+                                                                "type":  "EssentialElements\\Section",
+                                                                "properties":  {
+                                                                                   "design":  {
+                                                                                                  "sizing":  {
+                                                                                                                 "minHeight":  {
+                                                                                                                                   "number":  200,
+                                                                                                                                   "unit":  "px"
+                                                                                                                               }
+                                                                                                             },
+                                                                                                  "spacing":  {
+                                                                                                                  "padding":  {
+                                                                                                                                  "top":  {
+                                                                                                                                              "number":  40,
+                                                                                                                                              "unit":  "px"
+                                                                                                                                          },
+                                                                                                                                  "bottom":  {
+                                                                                                                                                 "number":  40,
+                                                                                                                                                 "unit":  "px"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                              },
+                                                                                                  "background":  {
+                                                                                                                     "color":  "#22c55e"
+                                                                                                                 }
+                                                                                              }
+                                                                               }
+                                                            },
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  41,
+                                                                        "data":  {
+                                                                                     "type":  "EssentialElements\\Heading",
+                                                                                     "properties":  {
+                                                                                                        "content":  {
+                                                                                                                        "content":  {
+                                                                                                                                        "text":  "Test 4: Solid Color (Control)",
+                                                                                                                                        "tags":  "h2"
+                                                                                                                                    }
+                                                                                                                    },
+                                                                                                        "design":  {
+                                                                                                                       "typography":  {
+                                                                                                                                          "size":  {
+                                                                                                                                                       "number":  24,
+                                                                                                                                                       "unit":  "px"
+                                                                                                                                                   },
+                                                                                                                                          "weight":  "700",
+                                                                                                                                          "color":  "#ffffff"
+                                                                                                                                      }
+                                                                                                                   }
+                                                                                                    }
+                                                                                 },
+                                                                        "children":  [
+
+                                                                                     ],
+                                                                        "_parentId":  40
+                                                                    }
+                                                                ],
+                                                   "_parentId":  1
+                                               }
+                                           ]
+                          },
+                 "_nextNodeId":  110,
+                 "status":  "exported"
+             },
+    "template_settings":  null,
+    "singularity_meta":  "false",
+    "conditions":  null
+}

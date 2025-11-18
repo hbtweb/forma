@@ -1,0 +1,10 @@
+{:avatar
+ {:slots [:image :fallback]
+  :props [:src :alt :size :shape]
+  :a11y {:role "img"}
+  :default-props {:size :md :shape :circle}
+  :schema-hints {:size [:xs :sm :md :lg :xl]
+                 :shape [:circle :square :rounded]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Image with fallback to initials or icon"}}
+

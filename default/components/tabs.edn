@@ -1,0 +1,7 @@
+{:tabs
+ {:slots [:tabs :panels]
+  :props [:active-tab :on-tab-change :orientation]
+  :a11y {:role "tablist"}
+  :default-props {:active-tab 0 :orientation :horizontal}
+  :schema-hints {:orientation [:horizontal :vertical]}}}
+

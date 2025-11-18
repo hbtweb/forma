@@ -1,0 +1,9 @@
+{:separator
+ {:slots []
+  :props [:orientation :decorative]
+  :a11y {:role "separator"}
+  :default-props {:orientation :horizontal :decorative false}
+  :schema-hints {:orientation [:horizontal :vertical]}
+  :platform-support [:web :mobile :desktop]
+  :platform-notes "Visual divider line"}}
+

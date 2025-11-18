@@ -1,0 +1,7 @@
+{:timeline
+ {:slots [:items]
+  :props [:data :orientation :show-icons]
+  :a11y {:role "list"}
+  :default-props {:orientation :vertical :show-icons true}
+  :schema-hints {:orientation [:vertical :horizontal]}}}
+

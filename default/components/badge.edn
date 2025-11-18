@@ -1,0 +1,7 @@
+{:badge
+ {:slots [:text]
+  :props [:variant :size]
+  :a11y {:role "status"}
+  :default-props {:size :md}
+  :schema-hints {:variant [:success :warning :error :info :default]
+                 :size [:sm :md :lg]}}}

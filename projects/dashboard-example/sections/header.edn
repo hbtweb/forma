@@ -1,0 +1,13 @@
+{:header {
+   :structure {
+     :type :header
+     :props {
+       :class "header"
+     }
+   }
+   :content {
+     :title {:type :h1 :props {}}
+     :subtitle {:type :p :props {}}
+   }
+}}
+

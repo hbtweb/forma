@@ -1,0 +1,12 @@
+{:stats-grid {
+   :structure {
+     :type :div
+     :props {
+       :class "stats-grid"
+     }
+   }
+   :content {
+     :cards {:type :stat-card :props {} :repeat true}
+   }
+}}
+

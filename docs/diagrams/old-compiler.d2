@@ -1,0 +1,180 @@
+title: "Old Corebase UI Compiler Architecture" {
+  near: top-center
+  style.font-size: 18
+}
+
+# Main Compilation Flow
+
+compile-to-html: {
+  shape: class
+  label: "compile-to-html"
+  description: "Main entry point"
+}
+
+compile-element: {
+  shape: class
+  label: "compile-element"
+  description: "Compile single element"
+}
+
+compile-oxygen-element: {
+  shape: class
+  label: "compile-oxygen-element"
+  description: "Compile using Oxygen registry"
+}
+
+# Parsing
+parse-element: {
+  shape: class
+  label: "parse-element\nParse vector/map to unified format"
+  style.fill: "#e8f5e9"
+}
+
+parse-element-note: {
+  shape: class
+  label: "Supports:\n[:tag attrs children]\n{:type :tag :props {...}}\n:div.card#main → classes + id"
+  style.fill: "#e8f5e9"
+  style.stroke-dash: 2
+}
+
+# Property Expansion
+expand-all-properties: {
+  shape: class
+  label: "expand-all-properties"
+  description: "Apply all expansions"
+}
+
+expand-property-shortcuts: {
+  shape: class
+  label: "expand-property-shortcuts"
+  description: ":bg → :background\n:pd → :padding"
+  style.fill: "#e8f5e9"
+}
+
+expand-feature-values: {
+  shape: class
+  label: "expand-feature-values"
+  description: ":anim :fade-in → full structure"
+  style.fill: "#e8f5e9"
+}
+
+# Template Resolution
+resolve-vars: {
+  shape: class
+  label: "resolve-vars"
+  description: "{{variable.name}} → value"
+  style.fill: "#fff3e0"
+}
+
+flatten-context: {
+  shape: class
+  label: "flatten-context"
+  description: "{:customer {:name \"John\"}}\n→ {:customer.name \"John\"}"
+  style.fill: "#fff3e0"
+}
+
+# Style Conversion
+element-styles: {
+  shape: class
+  label: "element-styles\nConvert props to CSS + HTMX"
+  style.fill: "#fff3e0"
+}
+
+element-styles-note: {
+  shape: class
+  label: "Features:\nbackground → style=\"...\"\nhx-get, hx-target extraction\ndesign.background → background"
+  style.fill: "#fff3e0"
+  style.stroke-dash: 2
+}
+
+# Element Registry
+element-registry: {
+  shape: cylinder
+  label: "Element Registry\nOxygen element definitions"
+  style.fill: "#f3e5f5"
+}
+
+load-element-registry: {
+  shape: class
+  label: "load-element-registry"
+  description: "Load from EDN files"
+}
+
+# Flow
+EDN-Input: {
+  shape: cylinder
+  label: "EDN Input\n[:section {:bg \"red\"}]"
+}
+
+Parsed-Element: {
+  shape: cylinder
+  label: "Parsed\n{:type :section :props {...}}"
+}
+
+Expanded-Props: {
+  shape: cylinder
+  label: "Expanded\n{:background \"red\"}"
+}
+
+Resolved-Props: {
+  shape: cylinder
+  label: "Resolved\n(template vars resolved)"
+}
+
+Styled-Attrs: {
+  shape: cylinder
+  label: "Styled\n{style: \"...\", hx-get: \"...\"}"
+}
+
+Hiccup-Output: {
+  shape: cylinder
+  label: "Hiccup\n[:div {...} children]"
+}
+
+HTML-Output: {
+  shape: cylinder
+  label: "HTML String\n<div>...</div>"
+}
+
+# Connections
+EDN-Input -> parse-element
+parse-element -> Parsed-Element
+Parsed-Element -> expand-all-properties
+expand-all-properties -> expand-property-shortcuts
+expand-all-properties -> expand-feature-values
+expand-property-shortcuts -> Expanded-Props
+expand-feature-values -> Expanded-Props
+Expanded-Props -> resolve-vars
+resolve-vars -> flatten-context
+flatten-context -> Resolved-Props
+Resolved-Props -> element-styles
+element-styles -> Styled-Attrs
+Styled-Attrs -> compile-element
+compile-element -> compile-oxygen-element
+compile-oxygen-element -> element-registry
+compile-oxygen-element -> Hiccup-Output
+Hiccup-Output -> HTML-Output
+
+compile-to-html -> compile-element
+load-element-registry -> element-registry
+
+parse-element -> parse-element-note
+element-styles -> element-styles-note
+
+# Legacy Elements
+Legacy-Elements: {
+  shape: class
+  label: "Legacy Elements\n:container, :text, :image,\n:divider, :spacer, :columns"
+  style.fill: "#ffebee"
+}
+
+# Custom Elements
+Custom-Elements: {
+  shape: class
+  label: "Custom Elements\n:data-table, :form-ssr,\n:kanban-board, etc."
+  style.fill: "#e1bee7"
+}
+
+compile-element -> Legacy-Elements
+compile-oxygen-element -> Custom-Elements
+

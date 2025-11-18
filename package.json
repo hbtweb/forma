@@ -1,0 +1,20 @@
+{
+  "name": "forma",
+  "version": "1.0.0",
+  "description": "Forma is the unified UI + Geometry application of the Kora framework. It compiles EDN to multiple targets including HTML/CSS/JavaScript, Flutter, SwiftUI, 3D Graphics (Three.js, WebGL), and Game Engines (Unity, Unreal, Godot).",
+  "main": "inspect_page_browser.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "puppeteer": "^24.30.0"
+  }
+}

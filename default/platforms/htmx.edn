@@ -1,0 +1,34 @@
+{:platform :htmx
+ :description "HTMX interactivity compilation - extends HTML"
+ :extends :html
+ :compiler {
+   :output-formats {
+     :attributes {
+       :description "HTMX attributes (default)"
+       :default true
+     }
+   }
+   :default-output-format :attributes
+   :extractors {
+     :attributes {
+       :type :attribute-selector
+       :keys [:hx-get :hx-post :hx-patch :hx-delete :hx-trigger :hx-target :hx-swap :hx-vals :hx-confirm :hx-boost :hx-push-url :hx-select :hx-select-oob :hx-sync :hx-indicator :hx-disinherit :hx-ext :hx-headers :hx-params :hx-validate :hx-encoding]
+       :output-format :attributes
+       :sugar {:swap {:outer "outerHTML"
+                      :inner "innerHTML"
+                      :before "beforebegin"
+                      :after "afterend"
+                      :none "none"
+                      :delete "delete"}}
+     }
+   }
+ }
+ :component-mappings
+ {:state-manager {:mappings {:state :hx-vals
+                            :on-change :hx-trigger
+                            :target :hx-target}
+                  :default-attrs {:hx-swap "outerHTML"}}
+  :form {:mappings {:on-submit :hx-post
+                   :target :hx-target}
+         :default-attrs {:hx-swap "outerHTML"}}}}
+

@@ -1,0 +1,8 @@
+{:card
+ {:slots [:header :body :footer]
+  :props [:variant :padding]
+  :a11y {:role "article"}
+  :default-props {:variant :default :padding :md}
+  :schema-hints {:variant [:default :outlined :elevated]
+                 :padding [:none :sm :md :lg]}}}
+

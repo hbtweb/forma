@@ -1,0 +1,42 @@
+{:build-config :development
+ :description "Development build configuration - Fast rebuilds, no optimization"
+
+ :mode :development
+
+ :paths {
+   :output-dir "build/dev/"
+   :clean-output? false
+ }
+
+ :tasks [:compile :assets :bundle]
+
+ :cache {
+   :enabled true
+   :strategy :timestamp
+   :disk-enabled? false
+ }
+
+ :optimization {
+   :enabled false
+ }
+
+ :minification {
+   :enabled false
+ }
+
+ :assets {
+   :copy-static? true
+   :fingerprint? false
+   :optimize-images? false
+ }
+
+ :bundle {
+   :enabled true
+   :split-css? false
+   :inline-critical-css? false
+ }
+
+ :watch {
+   :enabled true
+   :debounce-ms 100
+ }}

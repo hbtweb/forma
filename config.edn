@@ -82,6 +82,85 @@
    :pre-resolved-contexts true
  }
  
+ ;; Platform Registry (Multi-Platform Framework)
+ :platforms {
+   :html {:status :production
+          :maturity 100
+          :compiler :complete
+          :output :html-string
+          :targets [:web :ssr]}
+   :css {:status :production
+         :maturity 100
+         :compiler :complete
+         :output :css-string
+         :targets [:web]}
+   :htmx {:status :production
+          :maturity 100
+          :compiler :complete
+          :output :attributes
+          :targets [:web :ssr]}
+   :oxygen {:status :production
+            :maturity 100
+            :compiler :complete
+            :output :json-tree
+            :targets [:wordpress :cms]}
+   :react {:status :experimental
+           :maturity 40
+           :compiler :in-progress
+           :output :jsx-string
+           :targets [:web :spa :ssr]}
+   :flutter {:status :planned
+             :maturity 0
+             :compiler :not-started
+             :output :dart-code
+             :targets [:mobile :ios :android :web :desktop]}
+   :swiftui {:status :planned
+             :maturity 0
+             :compiler :not-started
+             :output :swift-code
+             :targets [:mobile :ios :macos :watchos :tvos]}
+   :threejs {:status :planned
+             :maturity 0
+             :compiler :not-started
+             :output :javascript
+             :targets [:web :3d :graphics]}
+   :unity {:status :planned
+           :maturity 0
+           :compiler :not-started
+           :output :csharp-code
+           :targets [:game :3d :vr :ar]}
+   :unreal {:status :planned
+            :maturity 0
+            :compiler :not-started
+            :output :cpp-code
+            :targets [:game :3d :vr :simulation]}
+   :godot {:status :planned
+           :maturity 0
+           :compiler :not-started
+           :output :gdscript
+           :targets [:game :2d :3d :indie]}
+ }
+
+ ;; CLI Configuration (Framework Tooling)
+ :cli {
+   :commands [:init :build :dev :generate :platforms]
+   :templates {
+     :html-app "templates/html-app/"
+     :react-app "templates/react-app/"
+     :flutter-app "templates/flutter-app/"
+   }
+   :default-platform :html
+   :watch-enabled true
+ }
+
+ ;; Examples and Project Templates
+ :examples {
+   :hello-world "examples/01-hello-world/"
+   :counter "examples/02-counter/"
+   :todo-app "examples/03-todo-app/"
+   :dashboard "examples/04-dashboard/"
+ }
+
  ;; System Variables
  :variables {
    :forma-version "1.0.0"

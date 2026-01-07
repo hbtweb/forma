@@ -1,16 +1,19 @@
 (ns forma.pages
   "Ultra-DSL Dynamic Page System - ONE renderer for ALL page types!
-   
+
    Define pages in 2-3 lines using templates.
    Generic renderer handles all hiccup generation.
-   
+
    Benefits:
    - 65% fewer lines (566 → 200)
    - Declarative page definitions
    - Consistent UI across all pages
-   - Easy to extend with new page types"
+   - Easy to extend with new page types
+
+   Dependencies:
+   - lume.ui: Provides resource metadata (get-metadata, get-list-columns, etc.)"
   (:require [forma.layout :as layout]
-            [forma.server.resource-engine :as engine]
+            [lume.ui :as engine]
             [clojure.string :as str]))
 
 ;; Re-export metadata functions for backward compatibility

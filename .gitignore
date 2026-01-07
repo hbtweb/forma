@@ -1,3 +1,4 @@
+# Clojure/Leiningen
 pom.xml
 pom.xml.asc
 *.jar
@@ -12,3 +13,33 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 .cpcache/
+
+# Clojure tools
+.clj-kondo/.cache/
+.lsp/.cache/
+.calva/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~

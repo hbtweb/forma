@@ -240,8 +240,9 @@
          [:tbody
           (if (empty? items)
          [:tr [:td {:colSpan (count columns) :style {:padding "48px" :text-align "center"}}
-               [:i.fa {:class (get-in config [:empty :icon]) :style {:font-size "48px" :margin-bottom "16px" :display "block" :color "#d1d5db"}}]
-               [:p (str/replace (get-in config [:empty :message]) "{{title}}" (:list-title metadata))]]]
+               [:i.fa {:class (get-in config [:empty :icon] "fa-inbox") :style {:font-size "48px" :margin-bottom "16px" :display "block" :color "#d1d5db"}}]
+               [:p (str/replace (or (get-in config [:empty :message]) "No {{title}} found")
+                                "{{title}}" (or (:list-title metadata) "items"))]]]
          (for [item items]
            [:tr
                (for [col columns]

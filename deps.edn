@@ -6,12 +6,10 @@
         clj-http/clj-http {:mvn/version "3.12.3"}
 
         ;; Kora Core - inheritance, tokens, compiler
-        io.github.apollonicolson/core {:git/url "https://github.com/apollonicolson/core.git"
-                                       :git/sha "abaa25528835f0eae71e0fef48ad34c907033fd5"}
+        kora/kora-core {:local/root "../kora/core"}
 
         ;; Lume Framework - provides UI metadata (get-metadata, get-list-columns, etc.)
-        io.github.hbtweb/lume-clj {:git/url "https://github.com/hbtweb/lume-clj.git"
-                                   :git/sha "447c7c3354154eb5ff2b04c14dea4a80983fa8ab"}}
+        lume/lume {:local/root "../lume-clj"}}
 
  ;; Framework Tooling Aliases
  :aliases {
